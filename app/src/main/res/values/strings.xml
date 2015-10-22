@@ -4,4 +4,27 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_menu_principal">MenuPrincipal</string>
+
+    <string-array name="array_menu_drawer">
+        <item>Presion</item>
+        <item>Temperatura</item>
+        <item>Loongitud</item>
+        <item>Superficie</item>
+        <item>Volumen</item>
+        <item>Masa</item>
+        <item>Energia</item>
+        <item>Fuerza</item>
+        <item>Potencia</item>
+        <item>Viscosidad</item>
+        <item>Densidad</item>
+        <item>Calor Especifico</item>
+        <item>Coeficiente de Transfecia de Calor</item>
+        <item>Conductividad Termica</item>
+        <item>Caudal Masico</item>
+        <item>Caudal Volumetrico</item>
+    </string-array>
+
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="title_activity_presion">Presion</string>
 </resources>

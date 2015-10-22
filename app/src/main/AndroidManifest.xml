@@ -20,6 +20,10 @@
             android:name=".MenuPrincipal"
             android:label="@string/title_activity_menu_principal" >
         </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Presion"
+            android:label="@string/title_activity_presion" >
+        </activity>
     </application>
 
 </manifest>
