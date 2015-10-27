@@ -24,6 +24,14 @@
             android:name="com.cditi.sena.conversiones.Presion"
             android:label="@string/title_activity_presion" >
         </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Temperatura"
+            android:label="@string/title_activity_temperatura" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Longitud"
+            android:label="@string/title_activity_longitud" >
+        </activity>
     </application>
 
 </manifest>

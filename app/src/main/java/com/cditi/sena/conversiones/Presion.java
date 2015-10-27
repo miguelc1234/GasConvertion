@@ -25,8 +25,6 @@ public class Presion extends AppCompatActivity
 
     double valorIngresado = 0;
     String valorVacio = "";
-    int posicion = 0;
-    double operacion = 0;
 
     DecimalFormat df = new DecimalFormat("0.00000000");
 

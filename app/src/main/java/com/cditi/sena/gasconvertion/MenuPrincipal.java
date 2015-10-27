@@ -13,7 +13,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.cditi.sena.conversiones.Longitud;
 import com.cditi.sena.conversiones.Presion;
+import com.cditi.sena.conversiones.Temperatura;
 
 import java.util.ArrayList;
 
@@ -72,9 +74,15 @@ public class MenuPrincipal extends AppCompatActivity
                 switch (position)
                 {
                     case 0:
-
                         abrirClase(Presion.class);
+                        break;
 
+                    case 1:
+                        abrirClase(Temperatura.class);
+                        break;
+
+                    case 2:
+                        abrirClase(Longitud.class);
                         break;
                 }
 
