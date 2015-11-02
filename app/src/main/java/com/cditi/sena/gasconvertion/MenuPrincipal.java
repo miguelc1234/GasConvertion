@@ -14,8 +14,11 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.cditi.sena.conversiones.Longitud;
+import com.cditi.sena.conversiones.Masa;
 import com.cditi.sena.conversiones.Presion;
+import com.cditi.sena.conversiones.Superficie;
 import com.cditi.sena.conversiones.Temperatura;
+import com.cditi.sena.conversiones.Volumen;
 
 import java.util.ArrayList;
 
@@ -83,6 +86,18 @@ public class MenuPrincipal extends AppCompatActivity
 
                     case 2:
                         abrirClase(Longitud.class);
+                        break;
+
+                    case 3:
+                        abrirClase(Superficie.class);
+                        break;
+
+                    case 4:
+                        abrirClase(Volumen.class);
+                        break;
+
+                    case 5:
+                        abrirClase(Masa.class);
                         break;
                 }
 

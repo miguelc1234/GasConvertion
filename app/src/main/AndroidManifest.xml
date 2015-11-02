@@ -32,6 +32,18 @@
             android:name="com.cditi.sena.conversiones.Longitud"
             android:label="@string/title_activity_longitud" >
         </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Superficie"
+            android:label="@string/title_activity_superficie" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Volumen"
+            android:label="@string/title_activity_volumen" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Masa"
+            android:label="@string/title_activity_masa" >
+        </activity>
     </application>
 
 </manifest>

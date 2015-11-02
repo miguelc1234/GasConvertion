@@ -29,4 +29,7 @@
     <string name="title_activity_presion">Presion</string>
     <string name="title_activity_temperatura">Temperatura</string>
     <string name="title_activity_longitud">Longitud</string>
+    <string name="title_activity_superficie">Superficie</string>
+    <string name="title_activity_volumen">Volumen</string>
+    <string name="title_activity_masa">Masa</string>
 </resources>

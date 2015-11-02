@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:background="@color/rojoClaro">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="m"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -62,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="plg"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -88,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="ft"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -114,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="milla"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 

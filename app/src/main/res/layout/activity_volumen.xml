@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Temperatura"
+                android:text="Volumen"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -35,13 +35,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="C°"
+                    android:text="m3"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/editC"
+                    android:id="@+id/editM3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -62,13 +62,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="K°"
+                    android:text="plg3"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/editK"
+                    android:id="@+id/editPlg3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -88,13 +88,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="F°"
+                    android:text="ft3"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/editF"
+                    android:id="@+id/editFt3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -114,13 +114,65 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="R°"
+                    android:text="cm3"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/editR"
+                    android:id="@+id/editCm3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="10"
+                    android:numeric="decimal"
+                    android:inputType="number|numberDecimal|numberSigned"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="lt"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editLt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="10"
+                    android:numeric="decimal"
+                    android:inputType="number|numberDecimal|numberSigned"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="gal"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editGal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

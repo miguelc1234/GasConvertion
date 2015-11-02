@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:background="@color/rojoClaro">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="bar"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -62,7 +63,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="N/m2"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -88,7 +89,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="atm"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -114,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="psi(lb/plg2)"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -140,7 +141,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="kgf/cm2"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -166,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="mmHg"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
@@ -192,7 +193,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="plgHg"
-                    android:textSize="18sp"
+                    android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 

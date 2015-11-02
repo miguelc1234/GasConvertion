@@ -1,16 +1,23 @@
 <android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawerlayout">
+    android:id="@+id/drawerlayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:openDrawer="start">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/rojoClaro"
+        android:gravity="center">
 
-
+        <ImageView
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:src="@drawable/logo"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
@@ -19,6 +26,6 @@
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@android:color/holo_blue_dark"></ListView>
+        android:background="@color/rojo"></ListView>
 
 </android.support.v4.widget.DrawerLayout>

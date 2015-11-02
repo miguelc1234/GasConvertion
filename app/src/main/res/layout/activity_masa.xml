@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Temperatura"
+                android:text="Masa"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -35,13 +35,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="C°"
+                    android:text="oz avdp"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/editC"
+                    android:id="@+id/editOzAvdp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -62,13 +62,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="K°"
+                    android:text="libras"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/editK"
+                    android:id="@+id/editLibras"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -88,13 +88,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="F°"
+                    android:text="Kg"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/editF"
+                    android:id="@+id/editKg"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -114,13 +114,13 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="R°"
+                    android:text="gramos"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
 
                 <EditText
-                    android:id="@+id/editR"
+                    android:id="@+id/editGramos"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
