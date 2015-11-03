@@ -44,6 +44,18 @@
             android:name="com.cditi.sena.conversiones.Masa"
             android:label="@string/title_activity_masa" >
         </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Energia"
+            android:label="@string/title_activity_energia" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Fuerza"
+            android:label="@string/title_activity_fuerza" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Potencia"
+            android:label="@string/title_activity_potencia" >
+        </activity>
     </application>
 
 </manifest>

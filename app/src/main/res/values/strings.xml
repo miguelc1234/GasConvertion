@@ -32,4 +32,7 @@
     <string name="title_activity_superficie">Superficie</string>
     <string name="title_activity_volumen">Volumen</string>
     <string name="title_activity_masa">Masa</string>
+    <string name="title_activity_energia">Energia</string>
+    <string name="title_activity_fuerza">Fuerza</string>
+    <string name="title_activity_potencia">Potencia</string>
 </resources>
