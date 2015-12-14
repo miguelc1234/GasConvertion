@@ -12,12 +12,12 @@ import com.cditi.sena.gasconvertion.R;
 
 import java.text.DecimalFormat;
 
-public class Temperatura extends AppCompatActivity
+public class Densidad extends AppCompatActivity
 {
-    EditText editC;
-    EditText editK;
-    EditText editF;
-    EditText editR;
+    EditText editKgM3;
+    EditText editLbFt3;
+    EditText editLbPlg3;
+    EditText editGCm3;
 
     double valorIngresado = 0;
     String valorVacio = "";
@@ -25,17 +25,18 @@ public class Temperatura extends AppCompatActivity
     DecimalFormat df = new DecimalFormat("0.00000000");
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_temperatura);
+        setContentView(R.layout.activity_densidad);
 
-        editC = (EditText) findViewById(R.id.editC);
-        editK = (EditText) findViewById(R.id.editK);
-        editF = (EditText) findViewById(R.id.editF);
-        editR = (EditText) findViewById(R.id.editR);
+        editKgM3 = (EditText) findViewById(R.id.editKgM3);
+        editLbFt3 = (EditText) findViewById(R.id.editLbFt3);
+        editLbPlg3 = (EditText) findViewById(R.id.editLbPlg3);
+        editGCm3 = (EditText) findViewById(R.id.editGCm3);
 
-        //Conversion para el Campo C°
-        editC.addTextChangedListener(new TextWatcher() {
+        //Conversion para el Campo KgM3
+        editKgM3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {}
@@ -43,7 +44,7 @@ public class Temperatura extends AppCompatActivity
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {
-                opC(charSequence);
+                opKgM3(charSequence);
 
             }
 
@@ -52,9 +53,8 @@ public class Temperatura extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo K°
-
-        editK.addTextChangedListener(new TextWatcher() {
+        //Conversion para el Campo LbFt3
+        editLbFt3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {}
@@ -62,7 +62,8 @@ public class Temperatura extends AppCompatActivity
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {
-                opK(charSequence);
+                opLbFt3(charSequence);
+
             }
 
             @Override
@@ -70,9 +71,8 @@ public class Temperatura extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo F°
-
-        editF.addTextChangedListener(new TextWatcher() {
+        //Conversion para el Campo LbPlg3
+        editLbPlg3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {}
@@ -80,7 +80,8 @@ public class Temperatura extends AppCompatActivity
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {
-                opF(charSequence);
+                opLbPlg3(charSequence);
+
             }
 
             @Override
@@ -88,9 +89,8 @@ public class Temperatura extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo R°
-
-        editR.addTextChangedListener(new TextWatcher() {
+        //Conversion para el Campo GCm3
+        editGCm3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {}
@@ -98,7 +98,8 @@ public class Temperatura extends AppCompatActivity
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
             {
-                opR(charSequence);
+                opGCm3(charSequence);
+
             }
 
             @Override
@@ -107,106 +108,106 @@ public class Temperatura extends AppCompatActivity
         });
     }
 
-    public void opC(CharSequence charSequence)
+    public void opKgM3(CharSequence charSequence)
     {
-        if(editC.isFocused())
+        if(editKgM3.isFocused())
         {
             valorVacio = charSequence.toString();
 
             if(valorVacio.equalsIgnoreCase(""))
             {
-                editK.setText("");
-                editF.setText("");
-                editR.setText("");
+                editLbFt3.setText("");
+                editLbPlg3.setText("");
+                editGCm3.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
                 //Convertir a N/m2
-                editK.setText(df.format(valorIngresado + 273).replace(",","."));
+                editLbFt3.setText(df.format(valorIngresado / 16.019).replace(",","."));
                 //Convertir a atm
-                editF.setText(df.format((1.8 * valorIngresado) + 32).replace(",", "."));
+                editLbPlg3.setText(df.format((valorIngresado / 1000) * 0.03612717).replace(",", "."));
                 //Convertir a Psi
-                editR.setText(df.format(valorIngresado * 1.8).replace(",", "."));
+                editGCm3.setText(df.format(valorIngresado / 1000).replace(",", "."));
             }
         }
     }
 
-    public void opK(CharSequence charSequence)
+    public void opLbFt3(CharSequence charSequence)
     {
-        if(editK.isFocused())
+        if(editLbFt3.isFocused())
         {
             valorVacio = charSequence.toString();
 
             if(valorVacio.equalsIgnoreCase(""))
             {
-                editC.setText("");
-                editF.setText("");
-                editR.setText("");
+                editKgM3.setText("");
+                editLbPlg3.setText("");
+                editGCm3.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
                 //Convertir a N/m2
-                editC.setText(df.format(valorIngresado - 273).replace(",","."));
+                editKgM3.setText(df.format(valorIngresado * 16.019).replace(",","."));
                 //Convertir a atm
-                editF.setText(df.format((1.8 * valorIngresado) + 32).replace(",", "."));
+                editLbPlg3.setText(df.format((valorIngresado * 0.016019) * 0.03612717).replace(",", "."));
                 //Convertir a Psi
-                editR.setText(df.format(valorIngresado * 1.8).replace(",", "."));
+                editGCm3.setText(df.format(valorIngresado / 62.42586).replace(",", "."));
             }
         }
     }
 
-    public void opF(CharSequence charSequence)
+    public void opLbPlg3(CharSequence charSequence)
     {
-        if(editF.isFocused())
+        if(editLbPlg3.isFocused())
         {
             valorVacio = charSequence.toString();
 
             if(valorVacio.equalsIgnoreCase(""))
             {
-                editC.setText("");
-                editK.setText("");
-                editR.setText("");
+                editKgM3.setText("");
+                editLbFt3.setText("");
+                editGCm3.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
                 //Convertir a N/m2
-                editC.setText(df.format((valorIngresado - 32) / 1.8).replace(",","."));
+                editKgM3.setText(df.format(valorIngresado / 0.0000361272).replace(",","."));
                 //Convertir a atm
-                editK.setText(df.format(valorIngresado + 273).replace(",", "."));
+                editLbFt3.setText(df.format(valorIngresado / 0.00057872).replace(",", "."));
                 //Convertir a Psi
-                editR.setText(df.format(valorIngresado + 469.67).replace(",", "."));
+                editGCm3.setText(df.format(valorIngresado * 27.68).replace(",", "."));
             }
         }
     }
 
-    public void opR(CharSequence charSequence)
+    public void opGCm3(CharSequence charSequence)
     {
-        if(editR.isFocused())
+        if(editGCm3.isFocused())
         {
             valorVacio = charSequence.toString();
 
             if(valorVacio.equalsIgnoreCase(""))
             {
-                editC.setText("");
-                editK.setText("");
-                editF.setText("");
+                editKgM3.setText("");
+                editLbFt3.setText("");
+                editLbPlg3.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
                 //Convertir a N/m2
-                editC.setText(df.format((valorIngresado - 32) / 1.8).replace(",", "."));
+                editKgM3.setText(df.format(valorIngresado * 1000).replace(",","."));
                 //Convertir a atm
-                editK.setText(df.format(valorIngresado / 1.8).replace(",", "."));
+                editLbFt3.setText(df.format((valorIngresado * 1000) * 0.06242586).replace(",", "."));
                 //Convertir a Psi
-                editF.setText(df.format(valorIngresado - 469.67).replace(",", "."));
+                editLbPlg3.setText(df.format(valorIngresado / 27.68).replace(",", "."));
             }
         }
     }
@@ -214,7 +215,7 @@ public class Temperatura extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_temperatura, menu);
+        getMenuInflater().inflate(R.menu.menu_densidad, menu);
         return true;
     }
 

@@ -13,6 +13,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.cditi.sena.conversiones.CoeficienteTransferenciaCalor;
+import com.cditi.sena.conversiones.Cp;
+import com.cditi.sena.conversiones.Densidad;
 import com.cditi.sena.conversiones.Energia;
 import com.cditi.sena.conversiones.Fuerza;
 import com.cditi.sena.conversiones.Longitud;
@@ -21,6 +24,7 @@ import com.cditi.sena.conversiones.Potencia;
 import com.cditi.sena.conversiones.Presion;
 import com.cditi.sena.conversiones.Superficie;
 import com.cditi.sena.conversiones.Temperatura;
+import com.cditi.sena.conversiones.Viscosidad;
 import com.cditi.sena.conversiones.Volumen;
 
 import java.util.ArrayList;
@@ -113,6 +117,22 @@ public class MenuPrincipal extends AppCompatActivity
 
                     case 8:
                         abrirClase(Potencia.class);
+                        break;
+
+                    case 9:
+                        abrirClase(Viscosidad.class);
+                        break;
+
+                    case 10:
+                        abrirClase(Densidad.class);
+                        break;
+
+                    case 11:
+                        abrirClase(Cp.class);
+                        break;
+
+                    case 12:
+                        abrirClase(CoeficienteTransferenciaCalor.class);
                         break;
                 }
 

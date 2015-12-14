@@ -56,6 +56,22 @@
             android:name="com.cditi.sena.conversiones.Potencia"
             android:label="@string/title_activity_potencia" >
         </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Viscosidad"
+            android:label="@string/title_activity_viscosidad" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Densidad"
+            android:label="@string/title_activity_densidad" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.Cp"
+            android:label="@string/title_activity_cp" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.CoeficienteTransferenciaCalor"
+            android:label="@string/title_activity_coeficiente_transferencia_calor" >
+        </activity>
     </application>
 
 </manifest>

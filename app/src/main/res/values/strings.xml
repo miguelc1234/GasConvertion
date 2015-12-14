@@ -35,4 +35,9 @@
     <string name="title_activity_energia">Energia</string>
     <string name="title_activity_fuerza">Fuerza</string>
     <string name="title_activity_potencia">Potencia</string>
+    <string name="title_activity_viscosidad">Viscosidad</string>
+    <string name="title_activity_densidad">Densidad</string>
+    <string name="title_activity_cp">Cp</string>
+    <string name="title_activity_coeficiente_transferencia_calor">CoeficienteTransferenciaCalor
+    </string>
 </resources>

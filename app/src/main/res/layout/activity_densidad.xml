@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/rojoClaro">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Densidad"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kg/m3"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editKgM3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:text=""
+                    android:maxLength="10"
+                    android:numeric="decimal"
+                    android:inputType="number|numberDecimal|numberSigned"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="lb/ft3"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editLbFt3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="10"
+                    android:numeric="decimal"
+                    android:inputType="number|numberDecimal|numberSigned"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="lb/plg3"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editLbPlg3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="10"
+                    android:numeric="decimal"
+                    android:inputType="number|numberDecimal|numberSigned"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="g/cm3"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editGCm3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="0"
+                    android:maxLength="10"
+                    android:numeric="decimal"
+                    android:inputType="number|numberDecimal|numberSigned"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
