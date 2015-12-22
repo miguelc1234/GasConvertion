@@ -72,6 +72,18 @@
             android:name="com.cditi.sena.conversiones.CoeficienteTransferenciaCalor"
             android:label="@string/title_activity_coeficiente_transferencia_calor" >
         </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.ConductividadTermica"
+            android:label="@string/title_activity_conductividad_termica" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.CaudalMasico"
+            android:label="@string/title_activity_caudal_masico" >
+        </activity>
+        <activity
+            android:name="com.cditi.sena.conversiones.CaudalVolumetrico"
+            android:label="@string/title_activity_caudal_volumetrico" >
+        </activity>
     </application>
 
 </manifest>

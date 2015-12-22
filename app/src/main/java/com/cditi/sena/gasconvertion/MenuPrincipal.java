@@ -13,7 +13,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.cditi.sena.conversiones.CaudalMasico;
+import com.cditi.sena.conversiones.CaudalVolumetrico;
 import com.cditi.sena.conversiones.CoeficienteTransferenciaCalor;
+import com.cditi.sena.conversiones.ConductividadTermica;
 import com.cditi.sena.conversiones.Cp;
 import com.cditi.sena.conversiones.Densidad;
 import com.cditi.sena.conversiones.Energia;
@@ -133,6 +136,18 @@ public class MenuPrincipal extends AppCompatActivity
 
                     case 12:
                         abrirClase(CoeficienteTransferenciaCalor.class);
+                        break;
+
+                    case 13:
+                        abrirClase(ConductividadTermica.class);
+                        break;
+
+                    case 14:
+                        abrirClase(CaudalMasico.class);
+                        break;
+
+                    case 15:
+                        abrirClase(CaudalVolumetrico.class);
                         break;
                 }
 

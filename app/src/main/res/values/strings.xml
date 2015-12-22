@@ -40,4 +40,7 @@
     <string name="title_activity_cp">Cp</string>
     <string name="title_activity_coeficiente_transferencia_calor">CoeficienteTransferenciaCalor
     </string>
+    <string name="title_activity_conductividad_termica">ConductividadTermica</string>
+    <string name="title_activity_caudal_masico">CaudalMasico</string>
+    <string name="title_activity_caudal_volumetrico">CaudalVolumetrico</string>
 </resources>
