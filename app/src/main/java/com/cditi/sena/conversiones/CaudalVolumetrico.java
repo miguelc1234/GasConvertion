@@ -463,24 +463,197 @@ public class CaudalVolumetrico extends AppCompatActivity
                 //Convertir a N/m2
                 editFt3S.setText(df.format(valorIngresado / 11.9376).replace(",", "."));
                 //Convertir a atm
-
-                //Aqui voy
-
                 editFt3H.setText(df.format(valorIngresado * 35.314).replace(",", "."));
                 //Convertir a Psi
-                editGalS.setText(df.format(valorIngresado * 264.17).replace(",", "."));
+                editGalS.setText(df.format((valorIngresado * 35.314) / 3600).replace(",", "."));
                 //Convertir a Psi
-                editGalH.setText(df.format((valorIngresado * 264.17) * 3600).replace(",", "."));
+                editGalH.setText(df.format((valorIngresado * 0.009809444) * 3600).replace(",", "."));
                 //Convertir a Psi
-                editM3S.setText(df.format(valorIngresado * 3600).replace(",", "."));
+                editM3S.setText(df.format(valorIngresado / 3600).replace(",", "."));
                 //Convertir a Psi
-                editCm3S.setText(df.format(valorIngresado * 1000000).replace(",", "."));
+                editCm3S.setText(df.format((valorIngresado * 1000000) / 3600).replace(",", "."));
                 //Convertir a Psi
-                editCm3H.setText(df.format((valorIngresado * 1000000) * 3600).replace(",", "."));
+                editCm3H.setText(df.format((valorIngresado * 277.7778) * 3600).replace(",", "."));
                 //Convertir a Psi
-                editLS.setText(df.format(valorIngresado * 1000).replace(",", "."));
+                editLS.setText(df.format((valorIngresado *1000) / 3600).replace(",", "."));
                 //Convertir a Psi
-                editLH.setText(df.format((valorIngresado * 1000) * 3600).replace(",", "."));
+                editLH.setText(df.format(valorIngresado * 1000).replace(",", "."));
+            }
+        }
+    }
+
+    public void opCm3S(CharSequence charSequence)
+    {
+        if(editCm3S.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editFt3S.setText("");
+                editFt3H.setText("");
+                editGalS.setText("");
+                editGalH.setText("");
+                editM3S.setText("");
+                editM3H.setText("");
+                editCm3H.setText("");
+                editLS.setText("");
+                editLH.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                //Convertir a N/m2
+                editFt3S.setText(df.format(valorIngresado * 0.0000353).replace(",", "."));
+                //Convertir a atm
+                editFt3H.setText(df.format(valorIngresado * 0.127133).replace(",", "."));
+                //Convertir a Psi
+                editGalS.setText(df.format(valorIngresado * 0.0002642).replace(",", "."));
+                //Convertir a Psi
+                editGalH.setText(df.format(valorIngresado * 0.951019).replace(",", "."));
+                //Convertir a Psi
+                editM3S.setText(df.format(valorIngresado * 0.000001).replace(",", "."));
+                //Convertir a Psi
+                editM3H.setText(df.format((valorIngresado * 0.000001) * 3600).replace(",", "."));
+                //Convertir a Psi
+                editCm3H.setText(df.format(valorIngresado * 3600).replace(",", "."));
+                //Convertir a Psi
+                editLS.setText(df.format(valorIngresado * 0.001).replace(",", "."));
+                //Convertir a Psi
+                editLH.setText(df.format((valorIngresado * 0.001) * 3600).replace(",", "."));
+            }
+        }
+    }
+
+    public void opCm3H(CharSequence charSequence)
+    {
+        if(editCm3H.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editFt3S.setText("");
+                editFt3H.setText("");
+                editGalS.setText("");
+                editGalH.setText("");
+                editM3S.setText("");
+                editM3H.setText("");
+                editCm3S.setText("");
+                editLS.setText("");
+                editLH.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                //Convertir a N/m2
+                editFt3S.setText(df.format((valorIngresado * 0.0000353) / 3600).replace(",", "."));
+                //Convertir a atm
+                editFt3H.setText(df.format(valorIngresado * 0.0000353).replace(",", "."));
+                //Convertir a Psi
+                editGalS.setText(df.format((valorIngresado * 0.0002642) / 3600).replace(",", "."));
+                //Convertir a Psi
+                editGalH.setText(df.format(valorIngresado * 0.0002642).replace(",", "."));
+                //Convertir a Psi
+                editM3S.setText(df.format((valorIngresado * 0.000001) / 3600).replace(",", "."));
+                //Convertir a Psi
+                editM3H.setText(df.format(valorIngresado * 0.000001).replace(",", "."));
+                //Convertir a Psi
+                editCm3S.setText(df.format(valorIngresado / 3600).replace(",", "."));
+                //Convertir a Psi
+                editLS.setText(df.format((valorIngresado * 0.001) / 3600).replace(",", "."));
+                //Convertir a Psi
+                editLH.setText(df.format(valorIngresado * 0.001).replace(",", "."));
+            }
+        }
+    }
+
+    public void opLS(CharSequence charSequence)
+    {
+        if(editLS.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editFt3S.setText("");
+                editFt3H.setText("");
+                editGalS.setText("");
+                editGalH.setText("");
+                editM3S.setText("");
+                editM3H.setText("");
+                editCm3S.setText("");
+                editCm3H.setText("");
+                editLH.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                //Convertir a N/m2
+                editFt3S.setText(df.format(valorIngresado * 0.0353).replace(",", "."));
+                //Convertir a atm
+                editFt3H.setText(df.format((valorIngresado * 0.0353) * 3600).replace(",", "."));
+                //Convertir a Psi
+                editGalS.setText(df.format(valorIngresado * 0.2642).replace(",", "."));
+                //Convertir a Psi
+                editGalH.setText(df.format((valorIngresado * 0.2642) * 3600).replace(",", "."));
+                //Convertir a Psi
+                editM3S.setText(df.format(valorIngresado * 0.001).replace(",", "."));
+                //Convertir a Psi
+                editM3H.setText(df.format((valorIngresado * 0.001) * 3600).replace(",", "."));
+                //Convertir a Psi
+                editCm3S.setText(df.format(valorIngresado * 1000).replace(",", "."));
+                //Convertir a Psi
+                editCm3H.setText(df.format((valorIngresado * 1000) * 3600).replace(",", "."));
+                //Convertir a Psi
+                editLH.setText(df.format(valorIngresado * 3600).replace(",", "."));
+            }
+        }
+    }
+
+    public void opLH(CharSequence charSequence)
+    {
+        if(editLH.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editFt3S.setText("");
+                editFt3H.setText("");
+                editGalS.setText("");
+                editGalH.setText("");
+                editM3S.setText("");
+                editM3H.setText("");
+                editCm3S.setText("");
+                editCm3H.setText("");
+                editLS.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                //Convertir a N/m2
+                editFt3S.setText(df.format((valorIngresado * 0.0353) / 3600).replace(",", "."));
+                //Convertir a atm
+                editFt3H.setText(df.format(valorIngresado * 0.0353).replace(",", "."));
+                //Convertir a Psi
+                editGalS.setText(df.format((valorIngresado * 0.2642) / 3600).replace(",", "."));
+                //Convertir a Psi
+                editGalH.setText(df.format(valorIngresado * 0.2642).replace(",", "."));
+                //Convertir a Psi
+                editM3S.setText(df.format((valorIngresado * 0.001) / 3600).replace(",", "."));
+                //Convertir a Psi
+                editM3H.setText(df.format(valorIngresado * 0.001).replace(",", "."));
+                //Convertir a Psi
+                editCm3S.setText(df.format((valorIngresado * 1000) / 3600).replace(",", "."));
+                //Convertir a Psi
+                editCm3H.setText(df.format(valorIngresado * 1000).replace(",", "."));
+                //Convertir a Psi
+                editLS.setText(df.format(valorIngresado / 3600).replace(",", "."));
             }
         }
     }
