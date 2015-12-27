@@ -22,6 +22,7 @@ public class Presion extends AppCompatActivity
     EditText editKgf;
     EditText editMmHg;
     EditText editPlgHg;
+    EditText editInH2O;
 
     double valorIngresado = 0;
     String valorVacio = "";
@@ -41,6 +42,7 @@ public class Presion extends AppCompatActivity
         editKgf = (EditText) findViewById(R.id.editKgf);
         editMmHg = (EditText) findViewById(R.id.editMmHg);
         editPlgHg = (EditText) findViewById(R.id.editPlgHg);
+        editInH2O = (EditText) findViewById(R.id.editInH2O);
 
         //Conversion para el Campo bar
         editBar.addTextChangedListener(new TextWatcher() {
@@ -167,6 +169,24 @@ public class Presion extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
+
+        //Conversion para el Campo InH2O
+
+        editInH2O.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+                opInH2O(charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable)
+            {}
+        });
     }
 
 
@@ -185,6 +205,7 @@ public class Presion extends AppCompatActivity
                 editKgf.setText("");
                 editMmHg.setText("");
                 editPlgHg.setText("");
+                editInH2O.setText("");
             }
             else
             {
@@ -202,6 +223,8 @@ public class Presion extends AppCompatActivity
                 editMmHg.setText(df.format(valorIngresado * 750.06).replace(",", "."));
                 //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 29.526).replace(",", "."));
+                //Convertir a InH2O
+                editInH2O.setText(df.format(valorIngresado * 401.463).replace(",", "."));
             }
         }
     }
@@ -220,6 +243,7 @@ public class Presion extends AppCompatActivity
                 editKgf.setText("");
                 editMmHg.setText("");
                 editPlgHg.setText("");
+                editInH2O.setText("");
             }
             else
             {
@@ -237,6 +261,8 @@ public class Presion extends AppCompatActivity
                 editMmHg.setText(df.format(valorIngresado * 0.0075006).replace(",", "."));
                 //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 0.0002952).replace(",","."));
+                //Convertir a InH2O
+                editInH2O.setText(df.format(valorIngresado * 0.004015).replace(",","."));
             }
         }
 
@@ -256,6 +282,7 @@ public class Presion extends AppCompatActivity
                 editKgf.setText("");
                 editMmHg.setText("");
                 editPlgHg.setText("");
+                editInH2O.setText("");
             }
             else
             {
@@ -273,6 +300,8 @@ public class Presion extends AppCompatActivity
                 editMmHg.setText(df.format(valorIngresado * 760).replace(",", "."));
                 //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 29.92).replace(",","."));
+                //Convertir a InH2O
+                editInH2O.setText(df.format(valorIngresado * 406.781).replace(",","."));
             }
         }
     }
@@ -291,6 +320,7 @@ public class Presion extends AppCompatActivity
                 editKgf.setText("");
                 editMmHg.setText("");
                 editPlgHg.setText("");
+                editInH2O.setText("");
             }
             else
             {
@@ -308,6 +338,8 @@ public class Presion extends AppCompatActivity
                 editMmHg.setText(df.format(valorIngresado * 51.715).replace(",", "."));
                 //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 2.036).replace(",","."));
+                //Convertir a InH2O
+                editInH2O.setText(df.format(valorIngresado * 27.6799).replace(",","."));
             }
         }
     }
@@ -326,6 +358,7 @@ public class Presion extends AppCompatActivity
                 editPsi.setText("");
                 editMmHg.setText("");
                 editPlgHg.setText("");
+                editInH2O.setText("");
             }
             else
             {
@@ -343,6 +376,8 @@ public class Presion extends AppCompatActivity
                 editMmHg.setText(df.format(valorIngresado * 735.6).replace(",", "."));
                 //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 28.96).replace(",","."));
+                //Convertir a InH2O
+                editInH2O.setText(df.format(valorIngresado * 393.7).replace(",","."));
             }
         }
     }
@@ -361,6 +396,7 @@ public class Presion extends AppCompatActivity
                 editPsi.setText("");
                 editKgf.setText("");
                 editPlgHg.setText("");
+                editInH2O.setText("");
             }
             else
             {
@@ -378,6 +414,8 @@ public class Presion extends AppCompatActivity
                 editKgf.setText(df.format(valorIngresado * 0.0013594).replace(",", "."));
                 //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 0.03937).replace(",","."));
+                //Convertir a InH2O
+                editInH2O.setText(df.format(valorIngresado * 0.53524).replace(",","."));
             }
         }
     }
@@ -396,6 +434,7 @@ public class Presion extends AppCompatActivity
                 editPsi.setText("");
                 editKgf.setText("");
                 editMmHg.setText("");
+                editInH2O.setText("");
             }
             else
             {
@@ -413,6 +452,46 @@ public class Presion extends AppCompatActivity
                 editKgf.setText(df.format(valorIngresado * 0.03453).replace(",", "."));
                 //Convertir a PlgHg
                 editMmHg.setText(df.format(valorIngresado * 25.4).replace(",","."));
+                //Convertir a InH2O
+                editInH2O.setText(df.format(valorIngresado * 13.5951).replace(",","."));
+            }
+        }
+    }
+
+    public void opInH2O(CharSequence charSequence)
+    {
+        if(editInH2O.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editBar.setText("");
+                editN_m2.setText("");
+                editAtm.setText("");
+                editPsi.setText("");
+                editKgf.setText("");
+                editMmHg.setText("");
+                editPlgHg.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                //Convertir a Bar
+                editBar.setText(df.format(valorIngresado * 0.002491).replace(",", "."));
+                //Convertir a N_m2
+                editN_m2.setText(df.format(valorIngresado * 249.089).replace(",", "."));
+                //Convertir a Atm
+                editAtm.setText(df.format(valorIngresado * 0.0024583).replace(",", "."));
+                //Convertir a Kgf
+                editPsi.setText(df.format(valorIngresado * 0.036127).replace(",", "."));
+                //Convertir a MmHg
+                editKgf.setText(df.format(valorIngresado * 0.00254).replace(",", "."));
+                //Convertir a PlgHg
+                editMmHg.setText(df.format(valorIngresado * 1.86832).replace(",","."));
+                //Convertir a PlgHg
+                editPlgHg.setText(df.format(valorIngresado * 0.073556).replace(",","."));
             }
         }
     }

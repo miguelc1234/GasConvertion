@@ -20,6 +20,7 @@ public class Energia extends AppCompatActivity
     EditText editCal;
     EditText editBtu;
     EditText editHphr;
+    EditText editMjH;
 
     double valorIngresado = 0;
     String valorVacio = "";
@@ -38,8 +39,8 @@ public class Energia extends AppCompatActivity
         editCal = (EditText) findViewById(R.id.editCal);
         editBtu = (EditText) findViewById(R.id.editBtu);
         editHphr = (EditText) findViewById(R.id.editHphr);
+        editMjH = (EditText) findViewById(R.id.editMjH);
 
-        //Conversion para el Campo Joule
         editJoule.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -57,7 +58,6 @@ public class Energia extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Kwh
         editKwh.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -75,7 +75,6 @@ public class Energia extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Kcal
         editKcal.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -93,7 +92,6 @@ public class Energia extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Cal
         editCal.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -111,7 +109,6 @@ public class Energia extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Btu
         editBtu.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -129,7 +126,6 @@ public class Energia extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Hp.Hr
         editHphr.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -146,6 +142,22 @@ public class Energia extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
+
+        editMjH.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                opMjH(charSequence);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
     }
 
     public void opJoule(CharSequence charSequence)
@@ -161,21 +173,18 @@ public class Energia extends AppCompatActivity
                 editCal.setText("");
                 editBtu.setText("");
                 editHphr.setText("");
+                editMjH.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Kwh
                 editKwh.setText(df.format(valorIngresado * 0.0000002777).replace(",","."));
-                //Convertir a Kcal
                 editKcal.setText(df.format(valorIngresado * 0.00023901).replace(",", "."));
-                //Convertir a Cal
                 editCal.setText(df.format((valorIngresado * 0.00023901) * 1000).replace(",", "."));
-                //Convertir a Btu
                 editBtu.setText(df.format(valorIngresado * 0.0009478).replace(",", "."));
-                //Convertir a Hphr
                 editHphr.setText(df.format(valorIngresado * 0.0000003728).replace(",", "."));
+                editMjH.setText(df.format(valorIngresado * 0.000001).replace(",", "."));
             }
         }
     }
@@ -193,21 +202,18 @@ public class Energia extends AppCompatActivity
                 editCal.setText("");
                 editBtu.setText("");
                 editHphr.setText("");
+                editMjH.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Joule
                 editJoule.setText(df.format(valorIngresado * 3600000).replace(",","."));
-                //Convertir a Kcal
                 editKcal.setText(df.format(valorIngresado * 860.4).replace(",", "."));
-                //Convertir a Cal
                 editCal.setText(df.format((valorIngresado * 860.4) * 1000).replace(",", "."));
-                //Convertir a Btu
                 editBtu.setText(df.format(valorIngresado * 3412.2).replace(",", "."));
-                //Convertir a Hphr
                 editHphr.setText(df.format(valorIngresado * 1.341).replace(",", "."));
+                editMjH.setText(df.format(valorIngresado * 3.6).replace(",", "."));
             }
         }
     }
@@ -225,21 +231,18 @@ public class Energia extends AppCompatActivity
                 editCal.setText("");
                 editBtu.setText("");
                 editHphr.setText("");
+                editMjH.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Joule
                 editJoule.setText(df.format(valorIngresado * 4184).replace(",","."));
-                //Convertir a Kwh
                 editKwh.setText(df.format(valorIngresado * 0.0011622).replace(",", "."));
-                //Convertir a Cal
                 editCal.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a Btu
                 editBtu.setText(df.format(valorIngresado * 3.9657).replace(",", "."));
-                //Convertir a Hphr
                 editHphr.setText(df.format(valorIngresado * 0.001558).replace(",", "."));
+                editMjH.setText(df.format(valorIngresado * 0.0041868).replace(",", "."));
             }
         }
     }
@@ -257,21 +260,18 @@ public class Energia extends AppCompatActivity
                 editKcal.setText("");
                 editBtu.setText("");
                 editHphr.setText("");
+                editMjH.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Joule
                 editJoule.setText(df.format(valorIngresado / 0.23901).replace(",", "."));
-                //Convertir a Kwh
                 editKwh.setText(df.format(valorIngresado / 860400).replace(",", "."));
-                //Convertir a Kcal
                 editKcal.setText(df.format(valorIngresado / 1000).replace(",", "."));
-                //Convertir a Btu
                 editBtu.setText(df.format(valorIngresado / 252.2).replace(",", "."));
-                //Convertir a Hphr
                 editHphr.setText(df.format(valorIngresado / 641620).replace(",", "."));
+                editMjH.setText("No hay formula");
             }
         }
     }
@@ -289,21 +289,18 @@ public class Energia extends AppCompatActivity
                 editKcal.setText("");
                 editCal.setText("");
                 editHphr.setText("");
+                editMjH.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Joule
                 editJoule.setText(df.format(valorIngresado * 1055).replace(",", "."));
-                //Convertir a Kwh
                 editKwh.setText(df.format(valorIngresado * 0.000293).replace(",", "."));
-                //Convertir a Kcal
                 editKcal.setText(df.format(valorIngresado * 0.2522).replace(",", "."));
-                //Convertir a Cal
                 editCal.setText(df.format((valorIngresado * 0.2522) * 1000).replace(",", "."));
-                //Convertir a Hphr
                 editHphr.setText(df.format(valorIngresado * 0.00039302).replace(",", "."));
+                editMjH.setText(df.format(valorIngresado * 0.001055056).replace(",", "."));
             }
         }
     }
@@ -321,21 +318,47 @@ public class Energia extends AppCompatActivity
                 editKcal.setText("");
                 editCal.setText("");
                 editBtu.setText("");
+                editMjH.setText("");
             }
             else
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Joule
                 editJoule.setText(df.format(valorIngresado * 2684500).replace(",", "."));
-                //Convertir a Kwh
                 editKwh.setText(df.format(valorIngresado * 0.7457).replace(",", "."));
-                //Convertir a Kcal
                 editKcal.setText(df.format(valorIngresado * 641.62).replace(",", "."));
-                //Convertir a Cal
                 editCal.setText(df.format((valorIngresado * 641.62) * 1000).replace(",", "."));
-                //Convertir a Hphr
                 editBtu.setText(df.format(valorIngresado * 2544.5).replace(",", "."));
+                editMjH.setText(df.format(valorIngresado * 2.68452).replace(",", "."));
+            }
+        }
+    }
+
+    public void opMjH(CharSequence charSequence)
+    {
+        if(editMjH.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editJoule.setText("");
+                editKwh.setText("");
+                editKcal.setText("");
+                editCal.setText("");
+                editBtu.setText("");
+                editHphr.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                editJoule.setText(df.format(valorIngresado * 1000000).replace(",", "."));
+                editKwh.setText(df.format(valorIngresado * 0.277778).replace(",", "."));
+                editKcal.setText(df.format(valorIngresado * 238.8459).replace(",", "."));
+                editCal.setText(df.format(valorIngresado * 238845.9).replace(",", "."));
+                editBtu.setText(df.format(valorIngresado * 947.8171).replace(",", "."));
+                editHphr.setText(df.format(valorIngresado * 0.3725061).replace(",", "."));
             }
         }
     }

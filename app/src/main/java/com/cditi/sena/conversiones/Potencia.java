@@ -19,6 +19,7 @@ public class Potencia extends AppCompatActivity
     EditText editKcalH;
     EditText editBtuH;
     EditText editHp;
+    EditText editKw;
 
     double valorIngresado = 0;
     String valorVacio = "";
@@ -35,6 +36,7 @@ public class Potencia extends AppCompatActivity
         editKcalH = (EditText) findViewById(R.id.editKcalH);
         editBtuH = (EditText) findViewById(R.id.editBtuH);
         editHp = (EditText) findViewById(R.id.editHp);
+        editKw = (EditText) findViewById(R.id.editKw);
 
         editW.addTextChangedListener(new TextWatcher() {
             @Override
@@ -103,6 +105,23 @@ public class Potencia extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
+
+        editKw.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+                opKw(charSequence);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable)
+            {}
+        });
     }
 
     public void opW(CharSequence charSequence)
@@ -116,6 +135,7 @@ public class Potencia extends AppCompatActivity
                 editKcalH.setText("");
                 editBtuH.setText("");
                 editHp.setText("");
+                editKw.setText("");
             }
             else
             {
@@ -124,6 +144,7 @@ public class Potencia extends AppCompatActivity
                 editKcalH.setText(df.format(valorIngresado * 0.8604).replace(",","."));
                 editBtuH.setText(df.format(valorIngresado * 3.413).replace(",", "."));
                 editHp.setText(df.format(valorIngresado * 0.001341).replace(",", "."));
+                editKw.setText(df.format(valorIngresado * 0.001).replace(",", "."));
             }
         }
     }
@@ -139,6 +160,7 @@ public class Potencia extends AppCompatActivity
                 editW.setText("");
                 editBtuH.setText("");
                 editHp.setText("");
+                editKw.setText("");
             }
             else
             {
@@ -147,6 +169,7 @@ public class Potencia extends AppCompatActivity
                 editW.setText(df.format(valorIngresado * 1.1611).replace(",","."));
                 editBtuH.setText(df.format(valorIngresado * 3.9657).replace(",", "."));
                 editHp.setText(df.format(valorIngresado * 0.001555).replace(",", "."));
+                editKw.setText(df.format(valorIngresado * 0.00116263888888889).replace(",", "."));
             }
         }
     }
@@ -162,6 +185,7 @@ public class Potencia extends AppCompatActivity
                 editW.setText("");
                 editKcalH.setText("");
                 editHp.setText("");
+                editKw.setText("");
             }
             else
             {
@@ -170,6 +194,7 @@ public class Potencia extends AppCompatActivity
                 editW.setText(df.format(valorIngresado * 0.2926).replace(",","."));
                 editKcalH.setText(df.format(valorIngresado * 0.2522).replace(",", "."));
                 editHp.setText(df.format(valorIngresado * 0.0003929).replace(",", "."));
+                editKw.setText(df.format(valorIngresado * 0.0002928104).replace(",", "."));
             }
         }
     }
@@ -185,6 +210,7 @@ public class Potencia extends AppCompatActivity
                 editW.setText("");
                 editKcalH.setText("");
                 editBtuH.setText("");
+                editKw.setText("");
             }
             else
             {
@@ -193,6 +219,32 @@ public class Potencia extends AppCompatActivity
                 editW.setText(df.format(valorIngresado * 745.7).replace(",","."));
                 editKcalH.setText(df.format(valorIngresado * 641.62).replace(",", "."));
                 editBtuH.setText(df.format(valorIngresado * 2545).replace(",", "."));
+                editKw.setText(df.format(valorIngresado * 0.7456999).replace(",", "."));
+            }
+        }
+    }
+
+    public void opKw(CharSequence charSequence)
+    {
+        if(editKw.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editW.setText("");
+                editKcalH.setText("");
+                editBtuH.setText("");
+                editHp.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                editW.setText(df.format(valorIngresado * 1000).replace(",","."));
+                editKcalH.setText(df.format(valorIngresado * 860.112).replace(",", "."));
+                editBtuH.setText(df.format(valorIngresado * 3415.179).replace(",", "."));
+                editHp.setText(df.format(valorIngresado * 1.341022).replace(",", "."));
             }
         }
     }

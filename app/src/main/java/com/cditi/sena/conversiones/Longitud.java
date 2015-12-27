@@ -18,6 +18,7 @@ public class Longitud extends AppCompatActivity
     EditText editPlg;
     EditText editFt;
     EditText editMilla;
+    EditText editCm;
 
     double valorIngresado = 0;
     String valorVacio = "";
@@ -34,6 +35,7 @@ public class Longitud extends AppCompatActivity
         editPlg = (EditText) findViewById(R.id.editPlg);
         editFt = (EditText) findViewById(R.id.editFt);
         editMilla = (EditText) findViewById(R.id.editMilla);
+        editCm = (EditText) findViewById(R.id.editCm);
 
         //Conversion para el Campo m
         editM.addTextChangedListener(new TextWatcher() {
@@ -106,6 +108,24 @@ public class Longitud extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
+
+        //Conversion para el Campo milla
+
+        editCm.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+                opCm(charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable)
+            {}
+        });
     }
 
     public void opM(CharSequence charSequence)
@@ -119,6 +139,7 @@ public class Longitud extends AppCompatActivity
                 editPlg.setText("");
                 editFt.setText("");
                 editMilla.setText("");
+                editCm.setText("");
             }
             else
             {
@@ -130,6 +151,8 @@ public class Longitud extends AppCompatActivity
                 editFt.setText(df.format(valorIngresado * 3.2808).replace(",", "."));
                 //Convertir a Psi
                 editMilla.setText(df.format(valorIngresado * 0.0006214).replace(",", "."));
+                //Convertir a Cm
+                editCm.setText(df.format(valorIngresado * 100).replace(",", "."));
             }
         }
     }
@@ -145,6 +168,7 @@ public class Longitud extends AppCompatActivity
                 editM.setText("");
                 editFt.setText("");
                 editMilla.setText("");
+                editCm.setText("");
             }
             else
             {
@@ -156,6 +180,8 @@ public class Longitud extends AppCompatActivity
                 editFt.setText(df.format(valorIngresado * 0.08333).replace(",", "."));
                 //Convertir a Psi
                 editMilla.setText(df.format(valorIngresado * 0.0000158).replace(",", "."));
+                //Convertir a Cm
+                editCm.setText(df.format(valorIngresado * 2.54).replace(",", "."));
             }
         }
     }
@@ -171,6 +197,7 @@ public class Longitud extends AppCompatActivity
                 editM.setText("");
                 editPlg.setText("");
                 editMilla.setText("");
+                editCm.setText("");
             }
             else
             {
@@ -182,6 +209,8 @@ public class Longitud extends AppCompatActivity
                 editPlg.setText(df.format(valorIngresado * 12).replace(",", "."));
                 //Convertir a Psi
                 editMilla.setText(df.format(valorIngresado * 0.00018939).replace(",", "."));
+                //Convertir a Cm
+                editCm.setText(df.format(valorIngresado * 30.48).replace(",", "."));
             }
         }
     }
@@ -197,6 +226,7 @@ public class Longitud extends AppCompatActivity
                 editM.setText("");
                 editPlg.setText("");
                 editFt.setText("");
+                editCm.setText("");
             }
             else
             {
@@ -208,6 +238,37 @@ public class Longitud extends AppCompatActivity
                 editPlg.setText(df.format(valorIngresado * 63360).replace(",", "."));
                 //Convertir a Psi
                 editFt.setText(df.format(valorIngresado * 5280).replace(",", "."));
+                //Convertir a Cm
+                editCm.setText(df.format(valorIngresado * 160934.4).replace(",", "."));
+            }
+        }
+    }
+
+    public void opCm(CharSequence charSequence)
+    {
+        if(editCm.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editM.setText("");
+                editPlg.setText("");
+                editFt.setText("");
+                editMilla.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                //Convertir a N/m2
+                editM.setText(df.format(valorIngresado * 0.01).replace(",","."));
+                //Convertir a atm
+                editPlg.setText(df.format(valorIngresado * 0.393701).replace(",", "."));
+                //Convertir a Psi
+                editFt.setText(df.format(valorIngresado * 0.0328083).replace(",", "."));
+                //Convertir a Milla
+                editMilla.setText(df.format(valorIngresado * 0.0000062).replace(",", "."));
             }
         }
     }

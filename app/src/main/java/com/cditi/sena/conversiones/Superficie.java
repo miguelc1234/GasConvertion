@@ -17,6 +17,7 @@ public class Superficie extends AppCompatActivity
     EditText editM2;
     EditText editPlg2;
     EditText editFt2;
+    EditText editCm2;
 
     double valorIngresado = 0;
     String valorVacio = "";
@@ -32,6 +33,7 @@ public class Superficie extends AppCompatActivity
         editM2 = (EditText) findViewById(R.id.editM2);
         editPlg2 = (EditText) findViewById(R.id.editPlg2);
         editFt2 = (EditText) findViewById(R.id.editFt2);
+        editCm2 = (EditText) findViewById(R.id.editCm2);
 
         //Conversion para el Campo m2
         editM2.addTextChangedListener(new TextWatcher() {
@@ -86,6 +88,24 @@ public class Superficie extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
+
+        //Conversion para el Campo Cm2
+
+        editCm2.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {}
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2)
+            {
+                opCm2(charSequence);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable)
+            {}
+        });
     }
 
     public void opM2(CharSequence charSequence)
@@ -98,6 +118,7 @@ public class Superficie extends AppCompatActivity
             {
                 editPlg2.setText("");
                 editFt2.setText("");
+                editCm2.setText("");
             }
             else
             {
@@ -107,6 +128,8 @@ public class Superficie extends AppCompatActivity
                 editPlg2.setText(df.format(valorIngresado * 1550).replace(",","."));
                 //Convertir a Ft2
                 editFt2.setText(df.format(valorIngresado * 10.764).replace(",", "."));
+                //Convertir a Cm2
+                editCm2.setText(df.format(valorIngresado * 10000).replace(",", "."));
             }
         }
     }
@@ -121,6 +144,7 @@ public class Superficie extends AppCompatActivity
             {
                 editM2.setText("");
                 editFt2.setText("");
+                editCm2.setText("");
             }
             else
             {
@@ -130,6 +154,8 @@ public class Superficie extends AppCompatActivity
                 editM2.setText(df.format(valorIngresado * 0.0006451).replace(",","."));
                 //Convertir a Ft2
                 editFt2.setText(df.format(valorIngresado * 0.006944).replace(",", "."));
+                //Convertir a Cm2
+                editCm2.setText(df.format(valorIngresado * 6.4516).replace(",", "."));
             }
         }
     }
@@ -144,6 +170,7 @@ public class Superficie extends AppCompatActivity
             {
                 editM2.setText("");
                 editPlg2.setText("");
+                editCm2.setText("");
             }
             else
             {
@@ -153,6 +180,34 @@ public class Superficie extends AppCompatActivity
                 editM2.setText(df.format(valorIngresado * 0.0929).replace(",","."));
                 //Convertir a Ft2
                 editPlg2.setText(df.format(valorIngresado * 144).replace(",", "."));
+                //Convertir a Cm2
+                editCm2.setText(df.format(valorIngresado * 929.0304).replace(",", "."));
+            }
+        }
+    }
+
+    public void opCm2(CharSequence charSequence)
+    {
+        if(editCm2.isFocused())
+        {
+            valorVacio = charSequence.toString();
+
+            if(valorVacio.equalsIgnoreCase(""))
+            {
+                editM2.setText("");
+                editPlg2.setText("");
+                editFt2.setText("");
+            }
+            else
+            {
+                valorIngresado = Double.parseDouble(charSequence.toString());
+
+                //Convertir a M2
+                editM2.setText(df.format(valorIngresado * 0.0001).replace(",","."));
+                //Convertir a Plg2
+                editPlg2.setText(df.format(valorIngresado * 0.1550003).replace(",", "."));
+                //Convertir a Ft2
+                editFt2.setText(df.format(valorIngresado * 0.001076391).replace(",", "."));
             }
         }
     }
