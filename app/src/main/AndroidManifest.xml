@@ -9,7 +9,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,43 +20,63 @@
         </activity>
         <activity
             android:name=".MenuPrincipal"
-            android:label="@string/title_activity_menu_principal" >
+            android:label="@string/title_activity_menu_principal"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Presion"
-            android:label="@string/title_activity_presion" >
+            android:label="@string/title_activity_presion"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Temperatura"
-            android:label="@string/title_activity_temperatura" >
+            android:label="@string/title_activity_temperatura"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Longitud"
-            android:label="@string/title_activity_longitud" >
+            android:label="@string/title_activity_longitud"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Superficie"
-            android:label="@string/title_activity_superficie" >
+            android:label="@string/title_activity_superficie"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Volumen"
-            android:label="@string/title_activity_volumen" >
+            android:label="@string/title_activity_volumen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Masa"
-            android:label="@string/title_activity_masa" >
+            android:label="@string/title_activity_masa"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Energia"
-            android:label="@string/title_activity_energia" >
+            android:label="@string/title_activity_energia"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Fuerza"
-            android:label="@string/title_activity_fuerza" >
+            android:label="@string/title_activity_fuerza"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Potencia"
-            android:label="@string/title_activity_potencia" >
+            android:label="@string/title_activity_potencia"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Viscosidad"
@@ -62,27 +84,39 @@
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Densidad"
-            android:label="@string/title_activity_densidad" >
+            android:label="@string/title_activity_densidad"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.Cp"
-            android:label="@string/title_activity_cp" >
+            android:label="@string/title_activity_cp"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.CoeficienteTransferenciaCalor"
-            android:label="@string/title_activity_coeficiente_transferencia_calor" >
+            android:label="@string/title_activity_coeficiente_transferencia_calor"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.ConductividadTermica"
-            android:label="@string/title_activity_conductividad_termica" >
+            android:label="@string/title_activity_conductividad_termica"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.CaudalMasico"
-            android:label="@string/title_activity_caudal_masico" >
+            android:label="@string/title_activity_caudal_masico"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
         <activity
             android:name="com.cditi.sena.conversiones.CaudalVolumetrico"
-            android:label="@string/title_activity_caudal_volumetrico" >
+            android:label="@string/title_activity_caudal_volumetrico"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
         </activity>
     </application>
 
