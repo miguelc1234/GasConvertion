@@ -6,22 +6,22 @@
     <string name="title_activity_menu_principal">MenuPrincipal</string>
 
     <string-array name="array_menu_drawer">
-        <item>Presion</item>
+        <item>Presión</item>
         <item>Temperatura</item>
-        <item>Loongitud</item>
+        <item>Longitud</item>
         <item>Superficie</item>
         <item>Volumen</item>
         <item>Masa</item>
-        <item>Energia</item>
+        <item>Energía</item>
         <item>Fuerza</item>
         <item>Potencia</item>
         <item>Viscosidad</item>
         <item>Densidad</item>
         <item>Calor Especifico</item>
-        <item>Coeficiente de Transfecia de Calor</item>
-        <item>Conductividad Termica</item>
-        <item>Caudal Masico</item>
-        <item>Caudal Volumetrico</item>
+        <item>Coeficiente de Transferencia de Calor</item>
+        <item>Conductividad Térmica</item>
+        <item>Caudal Másico</item>
+        <item>Caudal Volumétrico</item>
     </string-array>
 
     <string name="open">open</string>
@@ -43,4 +43,20 @@
     <string name="title_activity_conductividad_termica">ConductividadTermica</string>
     <string name="title_activity_caudal_masico">CaudalMasico</string>
     <string name="title_activity_caudal_volumetrico">CaudalVolumetrico</string>
+    <string name="caudal_masico">Caudal Másico</string>
+    <string name="caudal_volumetrico">Caudal Volumétrico</string>
+    <string name="coeficiente_calor">Coeficiente de Transferencia de Calor</string>
+    <string name="conductividad_termica">Conductividad Térmica</string>
+    <string name="cp">Cp (Calor específico)</string>
+    <string name="densidad">Densidad</string>
+    <string name="energia">Energía</string>
+    <string name="fuerza">Fuerza</string>
+    <string name="longitud">Longitud</string>
+    <string name="masa">Masa</string>
+    <string name="potencia">Potencia Flujo de Calor</string>
+    <string name="presion">Presión</string>
+    <string name="superficie">Superficie</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="viscosisas">Viscosidad</string>
+    <string name="volumen">Volumen</string>
 </resources>

@@ -306,7 +306,7 @@ public class Temperatura extends AppCompatActivity
                 //Convertir a atm
                 editK.setText(df.format(valorIngresado + 273).replace(",", "."));
                 //Convertir a Psi
-                editR.setText(df.format(valorIngresado + 469.67).replace(",", "."));
+                editR.setText(df.format(valorIngresado + 459.67).replace(",", "."));
             }
         }
     }
@@ -332,7 +332,7 @@ public class Temperatura extends AppCompatActivity
                 //Convertir a atm
                 editK.setText(df.format(valorIngresado / 1.8).replace(",", "."));
                 //Convertir a Psi
-                editF.setText(df.format(valorIngresado - 469.67).replace(",", "."));
+                editF.setText(df.format(valorIngresado - 459.67).replace(",", "."));
             }
         }
     }

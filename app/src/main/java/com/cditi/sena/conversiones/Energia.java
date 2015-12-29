@@ -397,7 +397,7 @@ public class Energia extends AppCompatActivity
                 editKcal.setText(df.format(valorIngresado / 1000).replace(",", "."));
                 editBtu.setText(df.format(valorIngresado / 252.2).replace(",", "."));
                 editHphr.setText(df.format(valorIngresado / 641620).replace(",", "."));
-                editMjH.setText("No hay formula");
+                editMjH.setText(df.format(valorIngresado * 238845.9).replace(",", "."));
             }
         }
     }
