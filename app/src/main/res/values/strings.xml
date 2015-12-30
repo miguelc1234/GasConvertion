@@ -59,4 +59,6 @@
     <string name="temperatura">Temperatura</string>
     <string name="viscosisas">Viscosidad</string>
     <string name="volumen">Volumen</string>
+    <string name="title_activity_codigo_activacion">CodigoActivacion</string>
+    <string name="codigo_activacion">Código de Activación</string>
 </resources>
