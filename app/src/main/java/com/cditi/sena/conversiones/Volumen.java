@@ -54,7 +54,6 @@ public class Volumen extends AppCompatActivity
         editLt = (EditText) findViewById(R.id.editLt);
         editGal = (EditText) findViewById(R.id.editGal);
 
-        //Conversion para el Campo m3
         editM3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -72,8 +71,6 @@ public class Volumen extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo plg3
-
         editPlg3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -89,8 +86,6 @@ public class Volumen extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo Ft3
 
         editFt3.addTextChangedListener(new TextWatcher() {
             @Override
@@ -108,8 +103,6 @@ public class Volumen extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Cm3
-
         editCm3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -126,8 +119,6 @@ public class Volumen extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Lt
-
         editLt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -143,8 +134,6 @@ public class Volumen extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo Gal
 
         editGal.addTextChangedListener(new TextWatcher() {
             @Override
@@ -191,10 +180,8 @@ public class Volumen extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -292,15 +279,10 @@ public class Volumen extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg3
                 editPlg3.setText(df.format(valorIngresado * 61023.7).replace(",","."));
-                //Convertir a Ft3
                 editFt3.setText(df.format(valorIngresado * 35.314).replace(",", "."));
-                //Convertir a Cm3
                 editCm3.setText(df.format(valorIngresado * 1000000).replace(",", "."));
-                //Convertir a Lt
                 editLt.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a Gal
                 editGal.setText(df.format(valorIngresado * 264.17).replace(",", "."));
             }
         }
@@ -324,15 +306,10 @@ public class Volumen extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg3
                 editM3.setText(df.format(valorIngresado * 0.00001638).replace(",","."));
-                //Convertir a Ft3
                 editFt3.setText(df.format(valorIngresado * 0.0005787).replace(",", "."));
-                //Convertir a Cm3
                 editCm3.setText(df.format(valorIngresado * 16.38).replace(",", "."));
-                //Convertir a Lt
                 editLt.setText(df.format(valorIngresado * 0.01638).replace(",", "."));
-                //Convertir a Gal
                 editGal.setText(df.format(valorIngresado * 0.004329).replace(",", "."));
             }
         }
@@ -356,15 +333,10 @@ public class Volumen extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg3
                 editM3.setText(df.format(valorIngresado * 0.02831).replace(",","."));
-                //Convertir a Ft3
                 editPlg3.setText(df.format(valorIngresado * 1728).replace(",", "."));
-                //Convertir a Cm3
                 editCm3.setText(df.format(valorIngresado * 28317).replace(",", "."));
-                //Convertir a Lt
                 editLt.setText(df.format(valorIngresado * 28.33).replace(",", "."));
-                //Convertir a Gal
                 editGal.setText(df.format(valorIngresado * 7.4805).replace(",", "."));
             }
         }
@@ -388,15 +360,10 @@ public class Volumen extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg3
                 editM3.setText(df.format(valorIngresado * 0.000001).replace(",","."));
-                //Convertir a Ft3
                 editPlg3.setText(df.format(valorIngresado * 0.061).replace(",", "."));
-                //Convertir a Cm3
                 editFt3.setText(df.format(valorIngresado * 0.0000353).replace(",", "."));
-                //Convertir a Lt
                 editLt.setText(df.format(valorIngresado * 0.001).replace(",", "."));
-                //Convertir a Gal
                 editGal.setText(df.format(valorIngresado * 0.0002642).replace(",", "."));
             }
         }
@@ -420,15 +387,10 @@ public class Volumen extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg3
                 editM3.setText(df.format(valorIngresado * 0.001).replace(",","."));
-                //Convertir a Ft3
                 editPlg3.setText(df.format(valorIngresado * 61.023).replace(",", "."));
-                //Convertir a Cm3
                 editFt3.setText(df.format(valorIngresado * 0.0353).replace(",", "."));
-                //Convertir a Lt
                 editCm3.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a Gal
                 editGal.setText(df.format(valorIngresado * 0.2642).replace(",", "."));
             }
         }
@@ -452,15 +414,10 @@ public class Volumen extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg3
                 editM3.setText(df.format(valorIngresado * 0.003785).replace(",","."));
-                //Convertir a Ft3
                 editPlg3.setText(df.format(valorIngresado * 231).replace(",", "."));
-                //Convertir a Cm3
                 editFt3.setText(df.format(valorIngresado * 0.1337).replace(",", "."));
-                //Convertir a Lt
                 editCm3.setText(df.format(valorIngresado * 3785).replace(",", "."));
-                //Convertir a Gal
                 editLt.setText(df.format(valorIngresado * 3.785).replace(",", "."));
             }
         }

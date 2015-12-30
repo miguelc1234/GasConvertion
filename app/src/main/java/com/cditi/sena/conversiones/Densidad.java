@@ -50,7 +50,6 @@ public class Densidad extends AppCompatActivity
         editLbPlg3 = (EditText) findViewById(R.id.editLbPlg3);
         editGCm3 = (EditText) findViewById(R.id.editGCm3);
 
-        //Conversion para el Campo KgM3
         editKgM3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -68,7 +67,6 @@ public class Densidad extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo LbFt3
         editLbFt3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -86,7 +84,6 @@ public class Densidad extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo LbPlg3
         editLbPlg3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -104,7 +101,6 @@ public class Densidad extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo GCm3
         editGCm3.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -151,10 +147,8 @@ public class Densidad extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -250,11 +244,8 @@ public class Densidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editLbFt3.setText(df.format(valorIngresado / 16.019).replace(",","."));
-                //Convertir a atm
                 editLbPlg3.setText(df.format((valorIngresado / 1000) * 0.03612717).replace(",", "."));
-                //Convertir a Psi
                 editGCm3.setText(df.format(valorIngresado / 1000).replace(",", "."));
             }
         }
@@ -276,11 +267,8 @@ public class Densidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgM3.setText(df.format(valorIngresado * 16.019).replace(",","."));
-                //Convertir a atm
                 editLbPlg3.setText(df.format((valorIngresado * 0.016019) * 0.03612717).replace(",", "."));
-                //Convertir a Psi
                 editGCm3.setText(df.format(valorIngresado / 62.42586).replace(",", "."));
             }
         }
@@ -302,11 +290,8 @@ public class Densidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgM3.setText(df.format(valorIngresado / 0.0000361272).replace(",","."));
-                //Convertir a atm
                 editLbFt3.setText(df.format(valorIngresado / 0.00057872).replace(",", "."));
-                //Convertir a Psi
                 editGCm3.setText(df.format(valorIngresado * 27.68).replace(",", "."));
             }
         }
@@ -328,11 +313,8 @@ public class Densidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgM3.setText(df.format(valorIngresado * 1000).replace(",","."));
-                //Convertir a atm
                 editLbFt3.setText(df.format((valorIngresado * 1000) * 0.06242586).replace(",", "."));
-                //Convertir a Psi
                 editLbPlg3.setText(df.format(valorIngresado / 27.68).replace(",", "."));
             }
         }

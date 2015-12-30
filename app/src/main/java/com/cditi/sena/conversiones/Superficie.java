@@ -50,7 +50,6 @@ public class Superficie extends AppCompatActivity
         editFt2 = (EditText) findViewById(R.id.editFt2);
         editCm2 = (EditText) findViewById(R.id.editCm2);
 
-        //Conversion para el Campo m2
         editM2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -68,8 +67,6 @@ public class Superficie extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo plg2
-
         editPlg2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -86,8 +83,6 @@ public class Superficie extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Ft2
-
         editFt2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -103,8 +98,6 @@ public class Superficie extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo Cm2
 
         editCm2.addTextChangedListener(new TextWatcher() {
             @Override
@@ -151,10 +144,8 @@ public class Superficie extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -250,11 +241,8 @@ public class Superficie extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg2
                 editPlg2.setText(df.format(valorIngresado * 1550).replace(",","."));
-                //Convertir a Ft2
                 editFt2.setText(df.format(valorIngresado * 10.764).replace(",", "."));
-                //Convertir a Cm2
                 editCm2.setText(df.format(valorIngresado * 10000).replace(",", "."));
             }
         }
@@ -276,11 +264,8 @@ public class Superficie extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg2
                 editM2.setText(df.format(valorIngresado * 0.0006451).replace(",","."));
-                //Convertir a Ft2
                 editFt2.setText(df.format(valorIngresado * 0.006944).replace(",", "."));
-                //Convertir a Cm2
                 editCm2.setText(df.format(valorIngresado * 6.4516).replace(",", "."));
             }
         }
@@ -302,11 +287,8 @@ public class Superficie extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Plg2
                 editM2.setText(df.format(valorIngresado * 0.0929).replace(",","."));
-                //Convertir a Ft2
                 editPlg2.setText(df.format(valorIngresado * 144).replace(",", "."));
-                //Convertir a Cm2
                 editCm2.setText(df.format(valorIngresado * 929.0304).replace(",", "."));
             }
         }
@@ -328,11 +310,8 @@ public class Superficie extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a M2
                 editM2.setText(df.format(valorIngresado * 0.0001).replace(",","."));
-                //Convertir a Plg2
                 editPlg2.setText(df.format(valorIngresado * 0.1550003).replace(",", "."));
-                //Convertir a Ft2
                 editFt2.setText(df.format(valorIngresado * 0.001076391).replace(",", "."));
             }
         }

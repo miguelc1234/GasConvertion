@@ -49,7 +49,6 @@ public class Temperatura extends AppCompatActivity
         editF = (EditText) findViewById(R.id.editF);
         editR = (EditText) findViewById(R.id.editR);
 
-        //Conversion para el Campo C°
         editC.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -67,8 +66,6 @@ public class Temperatura extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo K°
-
         editK.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -85,8 +82,6 @@ public class Temperatura extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo F°
-
         editF.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -102,8 +97,6 @@ public class Temperatura extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo R°
 
         editR.addTextChangedListener(new TextWatcher() {
             @Override
@@ -150,10 +143,8 @@ public class Temperatura extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -249,11 +240,8 @@ public class Temperatura extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editK.setText(df.format(valorIngresado + 273).replace(",","."));
-                //Convertir a atm
                 editF.setText(df.format((1.8 * valorIngresado) + 32).replace(",", "."));
-                //Convertir a Psi
                 editR.setText(df.format(valorIngresado * 1.8).replace(",", "."));
             }
         }
@@ -275,11 +263,8 @@ public class Temperatura extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editC.setText(df.format(valorIngresado - 273).replace(",","."));
-                //Convertir a atm
                 editF.setText(df.format((1.8 * valorIngresado) + 32).replace(",", "."));
-                //Convertir a Psi
                 editR.setText(df.format(valorIngresado * 1.8).replace(",", "."));
             }
         }
@@ -301,11 +286,8 @@ public class Temperatura extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editC.setText(df.format((valorIngresado - 32) / 1.8).replace(",","."));
-                //Convertir a atm
                 editK.setText(df.format(valorIngresado + 273).replace(",", "."));
-                //Convertir a Psi
                 editR.setText(df.format(valorIngresado + 459.67).replace(",", "."));
             }
         }
@@ -327,11 +309,8 @@ public class Temperatura extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editC.setText(df.format((valorIngresado - 32) / 1.8).replace(",", "."));
-                //Convertir a atm
                 editK.setText(df.format(valorIngresado / 1.8).replace(",", "."));
-                //Convertir a Psi
                 editF.setText(df.format(valorIngresado - 459.67).replace(",", "."));
             }
         }

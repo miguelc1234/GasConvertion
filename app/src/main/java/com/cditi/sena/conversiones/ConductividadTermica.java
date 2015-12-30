@@ -52,7 +52,6 @@ public class ConductividadTermica extends AppCompatActivity
         editWCm2C = (EditText) findViewById(R.id.editWCm2C);
         editKcalHm2 = (EditText) findViewById(R.id.editKcalHm2);
 
-        //Conversion para el Campo WM2K
         editWM2Cm.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -69,7 +68,6 @@ public class ConductividadTermica extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo Btu
         editBtu.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -86,7 +84,6 @@ public class ConductividadTermica extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo Cal
         editCal.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -103,7 +100,6 @@ public class ConductividadTermica extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo WCm2C
         editWCm2C.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -120,7 +116,6 @@ public class ConductividadTermica extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo KcalHm2
         editKcalHm2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -166,10 +161,8 @@ public class ConductividadTermica extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -266,13 +259,9 @@ public class ConductividadTermica extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editBtu.setText(df.format(valorIngresado * 0.5779).replace(",","."));
-                //Convertir a atm
                 editCal.setText(df.format(valorIngresado * 0.002388).replace(",", "."));
-                //Convertir a Psi
                 editWCm2C.setText(df.format(valorIngresado * 0.01).replace(",", "."));
-                //Convertir a Psi
                 editKcalHm2.setText(df.format(valorIngresado * 0.86).replace(",", "."));
             }
         }
@@ -295,13 +284,9 @@ public class ConductividadTermica extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editWM2Cm.setText(df.format(valorIngresado * 1.731).replace(",","."));
-                //Convertir a atm
                 editCal.setText(df.format(valorIngresado * 0.004134).replace(",", "."));
-                //Convertir a Psi
                 editWCm2C.setText(df.format(valorIngresado * 0.01731).replace(",", "."));
-                //Convertir a Psi
                 editKcalHm2.setText(df.format(valorIngresado * 1.488).replace(",", "."));
             }
         }
@@ -324,13 +309,9 @@ public class ConductividadTermica extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editWM2Cm.setText(df.format(valorIngresado * 418.7).replace(",","."));
-                //Convertir a atm
                 editBtu.setText(df.format(valorIngresado * 241.9).replace(",", "."));
-                //Convertir a Psi
                 editWCm2C.setText(df.format(valorIngresado * 4.187).replace(",", "."));
-                //Convertir a Psi
                 editKcalHm2.setText(df.format(valorIngresado * 360).replace(",", "."));
             }
         }
@@ -353,13 +334,9 @@ public class ConductividadTermica extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editWM2Cm.setText(df.format(valorIngresado * 100).replace(",","."));
-                //Convertir a atm
                 editBtu.setText(df.format(valorIngresado * 57.79).replace(",", "."));
-                //Convertir a Psi
                 editCal.setText(df.format(valorIngresado * 0.2388).replace(",", "."));
-                //Convertir a Psi
                 editKcalHm2.setText(df.format(valorIngresado * 86).replace(",", "."));
             }
         }
@@ -382,13 +359,9 @@ public class ConductividadTermica extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editWM2Cm.setText(df.format(valorIngresado * 1.163).replace(",","."));
-                //Convertir a atm
                 editBtu.setText(df.format(valorIngresado * 0.672).replace(",", "."));
-                //Convertir a Psi
                 editCal.setText(df.format(valorIngresado * 0.002778).replace(",", "."));
-                //Convertir a Psi
                 editWCm2C.setText(df.format(valorIngresado * 0.01163).replace(",", "."));
             }
         }

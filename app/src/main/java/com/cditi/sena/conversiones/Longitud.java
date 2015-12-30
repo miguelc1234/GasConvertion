@@ -52,7 +52,6 @@ public class Longitud extends AppCompatActivity
         editMilla = (EditText) findViewById(R.id.editMilla);
         editCm = (EditText) findViewById(R.id.editCm);
 
-        //Conversion para el Campo m
         editM.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -70,8 +69,6 @@ public class Longitud extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo plg
-
         editPlg.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -87,8 +84,6 @@ public class Longitud extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo Ft
 
         editFt.addTextChangedListener(new TextWatcher() {
             @Override
@@ -106,8 +101,6 @@ public class Longitud extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo milla
-
         editMilla.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -123,8 +116,6 @@ public class Longitud extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo milla
 
         editCm.addTextChangedListener(new TextWatcher() {
             @Override
@@ -171,10 +162,8 @@ public class Longitud extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -271,13 +260,9 @@ public class Longitud extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editPlg.setText(df.format(valorIngresado * 39.37).replace(",","."));
-                //Convertir a atm
                 editFt.setText(df.format(valorIngresado * 3.2808).replace(",", "."));
-                //Convertir a Psi
                 editMilla.setText(df.format(valorIngresado * 0.0006214).replace(",", "."));
-                //Convertir a Cm
                 editCm.setText(df.format(valorIngresado * 100).replace(",", "."));
             }
         }
@@ -300,13 +285,9 @@ public class Longitud extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editM.setText(df.format(valorIngresado * 0.0254).replace(",","."));
-                //Convertir a atm
                 editFt.setText(df.format(valorIngresado * 0.08333).replace(",", "."));
-                //Convertir a Psi
                 editMilla.setText(df.format(valorIngresado * 0.0000158).replace(",", "."));
-                //Convertir a Cm
                 editCm.setText(df.format(valorIngresado * 2.54).replace(",", "."));
             }
         }
@@ -329,13 +310,9 @@ public class Longitud extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editM.setText(df.format(valorIngresado * 0.3048).replace(",","."));
-                //Convertir a atm
                 editPlg.setText(df.format(valorIngresado * 12).replace(",", "."));
-                //Convertir a Psi
                 editMilla.setText(df.format(valorIngresado * 0.00018939).replace(",", "."));
-                //Convertir a Cm
                 editCm.setText(df.format(valorIngresado * 30.48).replace(",", "."));
             }
         }
@@ -358,13 +335,9 @@ public class Longitud extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editM.setText(df.format(valorIngresado * 1610).replace(",","."));
-                //Convertir a atm
                 editPlg.setText(df.format(valorIngresado * 63360).replace(",", "."));
-                //Convertir a Psi
                 editFt.setText(df.format(valorIngresado * 5280).replace(",", "."));
-                //Convertir a Cm
                 editCm.setText(df.format(valorIngresado * 160934.4).replace(",", "."));
             }
         }
@@ -387,13 +360,9 @@ public class Longitud extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editM.setText(df.format(valorIngresado * 0.01).replace(",","."));
-                //Convertir a atm
                 editPlg.setText(df.format(valorIngresado * 0.393701).replace(",", "."));
-                //Convertir a Psi
                 editFt.setText(df.format(valorIngresado * 0.0328083).replace(",", "."));
-                //Convertir a Milla
                 editMilla.setText(df.format(valorIngresado * 0.0000062).replace(",", "."));
             }
         }

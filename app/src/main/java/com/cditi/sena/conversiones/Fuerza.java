@@ -48,7 +48,6 @@ public class Fuerza extends AppCompatActivity
         editKgf = (EditText) findViewById(R.id.editKgf);
         editLbf = (EditText) findViewById(R.id.editLbf);
 
-        //Conversion para el Campo N
         editN.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -66,8 +65,6 @@ public class Fuerza extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Kgf
-
         editKgf.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -82,8 +79,6 @@ public class Fuerza extends AppCompatActivity
             public void afterTextChanged(Editable editable) {
             }
         });
-
-        //Conversion para el Campo Lbf
 
         editLbf.addTextChangedListener(new TextWatcher() {
             @Override
@@ -129,10 +124,8 @@ public class Fuerza extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()

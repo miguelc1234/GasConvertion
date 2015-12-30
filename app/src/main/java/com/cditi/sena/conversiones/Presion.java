@@ -58,7 +58,6 @@ public class Presion extends AppCompatActivity
         editPlgHg = (EditText) findViewById(R.id.editPlgHg);
         editInH2O = (EditText) findViewById(R.id.editInH2O);
 
-        //Conversion para el Campo bar
         editBar.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -76,8 +75,6 @@ public class Presion extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo N/m2
-
         editN_m2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -93,8 +90,6 @@ public class Presion extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo Atm
 
         editAtm.addTextChangedListener(new TextWatcher() {
             @Override
@@ -112,8 +107,6 @@ public class Presion extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Psi
-
         editPsi.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -129,8 +122,6 @@ public class Presion extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo Kgf
 
         editKgf.addTextChangedListener(new TextWatcher() {
             @Override
@@ -148,8 +139,6 @@ public class Presion extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo MmHg
-
         editMmHg.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -166,8 +155,6 @@ public class Presion extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo PlgHg
-
         editPlgHg.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -183,8 +170,6 @@ public class Presion extends AppCompatActivity
             public void afterTextChanged(Editable editable)
             {}
         });
-
-        //Conversion para el Campo InH2O
 
         editInH2O.addTextChangedListener(new TextWatcher() {
             @Override
@@ -231,10 +216,8 @@ public class Presion extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -334,19 +317,12 @@ public class Presion extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editN_m2.setText(df.format(valorIngresado * 100000).replace(",","."));
-                //Convertir a atm
                 editAtm.setText(df.format( valorIngresado * 0.9869).replace(",", "."));
-                //Convertir a Psi
                 editPsi.setText(df.format(valorIngresado * 14.504).replace(",", "."));
-                //Convertir a Kgf
                 editKgf.setText(df.format(valorIngresado * 1.0197).replace(",", "."));
-                //Convertir a MmHg
                 editMmHg.setText(df.format(valorIngresado * 750.06).replace(",", "."));
-                //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 29.526).replace(",", "."));
-                //Convertir a InH2O
                 editInH2O.setText(df.format(valorIngresado * 401.463).replace(",", "."));
             }
         }
@@ -372,19 +348,12 @@ public class Presion extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editBar.setText(df.format(valorIngresado*0.00001).replace(",", "."));
-                //Convertir a atm
                 editAtm.setText(df.format(valorIngresado * 0.00000987).replace(",", "."));
-                //Convertir a Psi
                 editPsi.setText(df.format(valorIngresado * 0.00014504).replace(",", "."));
-                //Convertir a Kgf
                 editKgf.setText(df.format(valorIngresado * 0.000010197).replace(",", "."));
-                //Convertir a MmHg
                 editMmHg.setText(df.format(valorIngresado * 0.0075006).replace(",", "."));
-                //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 0.0002952).replace(",","."));
-                //Convertir a InH2O
                 editInH2O.setText(df.format(valorIngresado * 0.004015).replace(",","."));
             }
         }
@@ -411,19 +380,12 @@ public class Presion extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Bar
                 editBar.setText(df.format(valorIngresado*1.01325).replace(",", "."));
-                //Convertir a N_m2
                 editN_m2.setText(df.format(valorIngresado * 101325).replace(",", "."));
-                //Convertir a Psi
                 editPsi.setText(df.format(valorIngresado * 14.696).replace(",", "."));
-                //Convertir a Kgf
                 editKgf.setText(df.format(valorIngresado * 1.033).replace(",", "."));
-                //Convertir a MmHg
                 editMmHg.setText(df.format(valorIngresado * 760).replace(",", "."));
-                //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 29.92).replace(",","."));
-                //Convertir a InH2O
                 editInH2O.setText(df.format(valorIngresado * 406.781).replace(",","."));
             }
         }
@@ -449,19 +411,12 @@ public class Presion extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Bar
                 editBar.setText(df.format(valorIngresado * 0.06894).replace(",", "."));
-                //Convertir a N_m2
                 editN_m2.setText(df.format(valorIngresado * 6894.7).replace(",", "."));
-                //Convertir a Atm
                 editAtm.setText(df.format(valorIngresado * 0.06804).replace(",", "."));
-                //Convertir a Kgf
                 editKgf.setText(df.format(valorIngresado * 0.07031).replace(",", "."));
-                //Convertir a MmHg
                 editMmHg.setText(df.format(valorIngresado * 51.715).replace(",", "."));
-                //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 2.036).replace(",","."));
-                //Convertir a InH2O
                 editInH2O.setText(df.format(valorIngresado * 27.6799).replace(",","."));
             }
         }
@@ -487,19 +442,12 @@ public class Presion extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Bar
                 editBar.setText(df.format(valorIngresado * 0.9807).replace(",", "."));
-                //Convertir a N_m2
                 editN_m2.setText(df.format(valorIngresado * 98068).replace(",", "."));
-                //Convertir a Atm
                 editAtm.setText(df.format(valorIngresado * 0.9678).replace(",", "."));
-                //Convertir a Kgf
                 editPsi.setText(df.format(valorIngresado * 14.22).replace(",", "."));
-                //Convertir a MmHg
                 editMmHg.setText(df.format(valorIngresado * 735.6).replace(",", "."));
-                //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 28.96).replace(",","."));
-                //Convertir a InH2O
                 editInH2O.setText(df.format(valorIngresado * 393.7).replace(",","."));
             }
         }
@@ -525,19 +473,12 @@ public class Presion extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Bar
                 editBar.setText(df.format(valorIngresado * 0.001333).replace(",", "."));
-                //Convertir a N_m2
                 editN_m2.setText(df.format(valorIngresado * 133.32).replace(",", "."));
-                //Convertir a Atm
                 editAtm.setText(df.format(valorIngresado * 0.001315).replace(",", "."));
-                //Convertir a Kgf
                 editPsi.setText(df.format(valorIngresado * 0.01933).replace(",", "."));
-                //Convertir a MmHg
                 editKgf.setText(df.format(valorIngresado * 0.0013594).replace(",", "."));
-                //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 0.03937).replace(",","."));
-                //Convertir a InH2O
                 editInH2O.setText(df.format(valorIngresado * 0.53524).replace(",","."));
             }
         }
@@ -563,19 +504,12 @@ public class Presion extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Bar
                 editBar.setText(df.format(valorIngresado * 0.033864).replace(",", "."));
-                //Convertir a N_m2
                 editN_m2.setText(df.format(valorIngresado * 3386.4).replace(",", "."));
-                //Convertir a Atm
                 editAtm.setText(df.format(valorIngresado * 0.0334).replace(",", "."));
-                //Convertir a Kgf
                 editPsi.setText(df.format(valorIngresado * 0.49116).replace(",", "."));
-                //Convertir a MmHg
                 editKgf.setText(df.format(valorIngresado * 0.03453).replace(",", "."));
-                //Convertir a PlgHg
                 editMmHg.setText(df.format(valorIngresado * 25.4).replace(",","."));
-                //Convertir a InH2O
                 editInH2O.setText(df.format(valorIngresado * 13.5951).replace(",","."));
             }
         }
@@ -601,19 +535,12 @@ public class Presion extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Bar
                 editBar.setText(df.format(valorIngresado * 0.002491).replace(",", "."));
-                //Convertir a N_m2
                 editN_m2.setText(df.format(valorIngresado * 249.089).replace(",", "."));
-                //Convertir a Atm
                 editAtm.setText(df.format(valorIngresado * 0.0024583).replace(",", "."));
-                //Convertir a Kgf
                 editPsi.setText(df.format(valorIngresado * 0.036127).replace(",", "."));
-                //Convertir a MmHg
                 editKgf.setText(df.format(valorIngresado * 0.00254).replace(",", "."));
-                //Convertir a PlgHg
                 editMmHg.setText(df.format(valorIngresado * 1.86832).replace(",","."));
-                //Convertir a PlgHg
                 editPlgHg.setText(df.format(valorIngresado * 0.073556).replace(",","."));
             }
         }

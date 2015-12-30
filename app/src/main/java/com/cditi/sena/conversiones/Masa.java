@@ -50,7 +50,6 @@ public class Masa extends AppCompatActivity
         editKg = (EditText) findViewById(R.id.editKg);
         editGramos = (EditText) findViewById(R.id.editGramos);
 
-        //Conversion para el Campo OzAvdp
         editOzAvdp.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -68,7 +67,6 @@ public class Masa extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Libras
         editLibras.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -86,7 +84,6 @@ public class Masa extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Kg
         editKg.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -104,7 +101,6 @@ public class Masa extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Gramos
         editGramos.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -151,10 +147,8 @@ public class Masa extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -250,11 +244,8 @@ public class Masa extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a Libras
                 editLibras.setText(df.format(valorIngresado * 0.0625).replace(",","."));
-                //Convertir a Kg
                 editKg.setText(df.format((valorIngresado * 28.38) / 1000).replace(",", "."));
-                //Convertir a Gramos
                 editGramos.setText(df.format(valorIngresado * 28.35).replace(",", "."));
             }
         }
@@ -276,11 +267,8 @@ public class Masa extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a OzAvdp
                 editOzAvdp.setText(df.format(valorIngresado * 16).replace(",","."));
-                //Convertir a Kg
                 editKg.setText(df.format((valorIngresado * 453.6) / 1000).replace(",", "."));
-                //Convertir a Gramos
                 editGramos.setText(df.format(valorIngresado * 453.6).replace(",", "."));
             }
         }
@@ -302,11 +290,8 @@ public class Masa extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a OzAvdp
                 editOzAvdp.setText(df.format(valorIngresado / 0.02838).replace(",", "."));
-                //Convertir a Libras
                 editLibras.setText(df.format(valorIngresado / 0.4536).replace(",", "."));
-                //Convertir a Gramos
                 editGramos.setText(df.format(valorIngresado * 1000).replace(",", "."));
             }
         }
@@ -328,11 +313,8 @@ public class Masa extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a OzAvdp
                 editOzAvdp.setText(df.format(valorIngresado * 0.03527).replace(",", "."));
-                //Convertir a Libras
                 editLibras.setText(df.format(valorIngresado * 0.0022).replace(",", "."));
-                //Convertir a Kg
                 editKg.setText(df.format(valorIngresado / 1000).replace(",", "."));
             }
         }

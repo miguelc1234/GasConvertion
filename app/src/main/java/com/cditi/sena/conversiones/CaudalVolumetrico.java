@@ -62,7 +62,6 @@ public class CaudalVolumetrico extends AppCompatActivity
         editLS = (EditText) findViewById(R.id.editLS);
         editLH = (EditText) findViewById(R.id.editLH);
 
-        //Conversion para el Campo Ft3S
         editFt3S.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -79,7 +78,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo Ft3H
         editFt3H.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -96,7 +94,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo GalS
         editGalS.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -113,7 +110,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo GalH
         editGalH.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -130,7 +126,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo M3S
         editM3S.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -147,7 +142,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo M3H
         editM3H.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -164,7 +158,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo Cm3S
         editCm3S.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -181,7 +174,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo Cm3H
         editCm3H.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -198,7 +190,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo LS
         editLS.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -215,7 +206,6 @@ public class CaudalVolumetrico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo LH
         editLH.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -261,10 +251,8 @@ public class CaudalVolumetrico extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -366,23 +354,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3H.setText(df.format(valorIngresado * 3600).replace(",","."));
-                //Convertir a atm
                 editGalS.setText(df.format(valorIngresado * 7.4805).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format((valorIngresado * 7.4805) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format(valorIngresado * 0.028316).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format((valorIngresado * 0.028316) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format((valorIngresado * 0.028316) * 1000000).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format((valorIngresado * 28316) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format(valorIngresado * 28.31).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format((valorIngresado * 28.31) * 3600).replace(",", "."));
             }
         }
@@ -410,23 +389,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format(valorIngresado / 3600).replace(",","."));
-                //Convertir a atm
                 editGalS.setText(df.format((valorIngresado * 7.4805) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format(valorIngresado * 7.4805).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format((valorIngresado * 0.028316) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format(valorIngresado * 0.028316).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format((valorIngresado * 28316) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format(valorIngresado * 28316).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format((valorIngresado * 28.31) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format(valorIngresado * 28.31).replace(",", "."));
             }
         }
@@ -454,23 +424,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format(valorIngresado * 0.1337).replace(",","."));
-                //Convertir a atm
                 editFt3H.setText(df.format((valorIngresado * 0.1337) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format(valorIngresado * 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format(valorIngresado * 0.003785).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format((valorIngresado * 0.003785) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format(valorIngresado * 3785).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format((valorIngresado * 3785) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format((valorIngresado * 3785) / 1000).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format((valorIngresado * 3.785) * 3600).replace(",", "."));
             }
         }
@@ -498,23 +459,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format((valorIngresado * 0.1337) / 3600).replace(",","."));
-                //Convertir a atm
                 editFt3H.setText(df.format(valorIngresado * 0.1337).replace(",", "."));
-                //Convertir a Psi
                 editGalS.setText(df.format(valorIngresado / 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format((valorIngresado * 0.003785) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format(valorIngresado * 0.003785).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format(valorIngresado * 1.051).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format((valorIngresado * 1.051) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format((valorIngresado * 0.001) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format(valorIngresado * 0.001).replace(",", "."));
             }
         }
@@ -542,23 +494,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format(valorIngresado / 0.028316).replace(",", "."));
-                //Convertir a atm
                 editFt3H.setText(df.format((valorIngresado * 35.31572256) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editGalS.setText(df.format(valorIngresado * 264.17).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format((valorIngresado * 264.17) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format(valorIngresado * 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format(valorIngresado * 1000000).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format((valorIngresado * 1000000) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format((valorIngresado * 1000) * 3600).replace(",", "."));
             }
         }
@@ -586,23 +529,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format(valorIngresado / 11.9376).replace(",", "."));
-                //Convertir a atm
                 editFt3H.setText(df.format(valorIngresado * 35.314).replace(",", "."));
-                //Convertir a Psi
                 editGalS.setText(df.format((valorIngresado * 35.314) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format((valorIngresado * 0.009809444) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format(valorIngresado / 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format((valorIngresado * 1000000) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format((valorIngresado * 277.7778) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format((valorIngresado *1000) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format(valorIngresado * 1000).replace(",", "."));
             }
         }
@@ -630,23 +564,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format(valorIngresado * 0.0000353).replace(",", "."));
-                //Convertir a atm
                 editFt3H.setText(df.format(valorIngresado * 0.127133).replace(",", "."));
-                //Convertir a Psi
                 editGalS.setText(df.format(valorIngresado * 0.0002642).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format(valorIngresado * 0.951019).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format(valorIngresado * 0.000001).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format((valorIngresado * 0.000001) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format(valorIngresado * 3600).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format(valorIngresado * 0.001).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format((valorIngresado * 0.001) * 3600).replace(",", "."));
             }
         }
@@ -674,23 +599,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format((valorIngresado * 0.0000353) / 3600).replace(",", "."));
-                //Convertir a atm
                 editFt3H.setText(df.format(valorIngresado * 0.0000353).replace(",", "."));
-                //Convertir a Psi
                 editGalS.setText(df.format((valorIngresado * 0.0002642) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format(valorIngresado * 0.0002642).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format((valorIngresado * 0.000001) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format(valorIngresado * 0.000001).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format(valorIngresado / 3600).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format((valorIngresado * 0.001) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format(valorIngresado * 0.001).replace(",", "."));
             }
         }
@@ -718,23 +634,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format(valorIngresado * 0.0353).replace(",", "."));
-                //Convertir a atm
                 editFt3H.setText(df.format((valorIngresado * 0.0353) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editGalS.setText(df.format(valorIngresado * 0.2642).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format((valorIngresado * 0.2642) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format(valorIngresado * 0.001).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format((valorIngresado * 0.001) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format((valorIngresado * 1000) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editLH.setText(df.format(valorIngresado * 3600).replace(",", "."));
             }
         }
@@ -762,23 +669,14 @@ public class CaudalVolumetrico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editFt3S.setText(df.format((valorIngresado * 0.0353) / 3600).replace(",", "."));
-                //Convertir a atm
                 editFt3H.setText(df.format(valorIngresado * 0.0353).replace(",", "."));
-                //Convertir a Psi
                 editGalS.setText(df.format((valorIngresado * 0.2642) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editGalH.setText(df.format(valorIngresado * 0.2642).replace(",", "."));
-                //Convertir a Psi
                 editM3S.setText(df.format((valorIngresado * 0.001) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editM3H.setText(df.format(valorIngresado * 0.001).replace(",", "."));
-                //Convertir a Psi
                 editCm3S.setText(df.format((valorIngresado * 1000) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editCm3H.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a Psi
                 editLS.setText(df.format(valorIngresado / 3600).replace(",", "."));
             }
         }

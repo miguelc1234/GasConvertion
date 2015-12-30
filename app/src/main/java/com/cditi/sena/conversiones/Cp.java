@@ -46,7 +46,6 @@ public class Cp extends AppCompatActivity
         editJKgK = (EditText) findViewById(R.id.editJKgK);
         editKcal = (EditText) findViewById(R.id.editKcal);
 
-        //Conversion para el Campo JKgK
         editJKgK.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -64,7 +63,6 @@ public class Cp extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Kcal
         editKcal.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -111,10 +109,8 @@ public class Cp extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -208,7 +204,6 @@ public class Cp extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKcal.setText(df.format(valorIngresado * 0.000239).replace(",","."));
             }
         }
@@ -228,7 +223,6 @@ public class Cp extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editJKgK.setText(df.format(valorIngresado * 4184).replace(",","."));
             }
         }

@@ -54,7 +54,6 @@ public class Viscosidad extends AppCompatActivity
         editLbHft = (EditText) findViewById(R.id.editLbHft);
         editKgHm = (EditText) findViewById(R.id.editKgHm);
 
-        //Conversion para el Campo NsM2
         editP.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -72,7 +71,6 @@ public class Viscosidad extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo Cp
         editCp.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -90,7 +88,6 @@ public class Viscosidad extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo LbSft
         editLbSft.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -108,7 +105,6 @@ public class Viscosidad extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo LbfsFt2
         editLbfsFt2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -126,7 +122,6 @@ public class Viscosidad extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo LbHft
         editLbHft.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -144,7 +139,6 @@ public class Viscosidad extends AppCompatActivity
             {}
         });
 
-        //Conversion para el Campo KgHm
         editKgHm.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2)
@@ -191,10 +185,8 @@ public class Viscosidad extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -292,15 +284,10 @@ public class Viscosidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editCp.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a atm
                 editLbSft.setText(df.format(valorIngresado * 0.672).replace(",", "."));
-                //Convertir a Psi
                 editLbfsFt2.setText(df.format(valorIngresado * 0.0209).replace(",", "."));
-                //Convertir a Psi
                 editLbHft.setText(df.format(valorIngresado * 2420).replace(",", "."));
-                //Convertir a Psi
                 editKgHm.setText(df.format(valorIngresado * 3600).replace(",", "."));
             }
         }
@@ -324,15 +311,10 @@ public class Viscosidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editP.setText(df.format(valorIngresado * 0.001).replace(",", "."));
-                //Convertir a atm
                 editLbSft.setText(df.format(valorIngresado * 0.000672).replace(",", "."));
-                //Convertir a Psi
                 editLbfsFt2.setText(df.format(valorIngresado * 0.000029).replace(",", "."));
-                //Convertir a Psi
                 editLbHft.setText(df.format(valorIngresado * 2.42).replace(",", "."));
-                //Convertir a Psi
                 editKgHm.setText(df.format(valorIngresado * 3.6).replace(",", "."));
             }
         }
@@ -356,15 +338,10 @@ public class Viscosidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editP.setText(df.format(valorIngresado * 1.49).replace(",", "."));
-                //Convertir a atm
                 editCp.setText(df.format(valorIngresado * 1490).replace(",", "."));
-                //Convertir a Psi
                 editLbfsFt2.setText(df.format(valorIngresado * 0.0311).replace(",", "."));
-                //Convertir a Psi
                 editLbHft.setText(df.format(valorIngresado * 3600).replace(",", "."));
-                //Convertir a Psi
                 editKgHm.setText(df.format(valorIngresado * 5350).replace(",", "."));
             }
         }
@@ -388,15 +365,10 @@ public class Viscosidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editP.setText(df.format((valorIngresado * 0.000277778) * 14.882).replace(",", "."));
-                //Convertir a atm
                 editCp.setText(df.format((valorIngresado * 0.00041338) * 1000).replace(",", "."));
-                //Convertir a Psi
                 editLbSft.setText(df.format(valorIngresado * 0.00041338).replace(",", "."));
-                //Convertir a Psi
                 editLbHft.setText(df.format(valorIngresado / 3600).replace(",", "."));
-                //Convertir a Psi
                 editKgHm.setText(df.format(valorIngresado / 3600).replace(",", "."));
             }
         }
@@ -420,15 +392,10 @@ public class Viscosidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editP.setText(df.format(valorIngresado * 0.0004134).replace(",", "."));
-                //Convertir a atm
                 editCp.setText(df.format(valorIngresado * 0.4134).replace(",", "."));
-                //Convertir a Psi
                 editLbSft.setText(df.format(valorIngresado * 0.000278).replace(",", "."));
-                //Convertir a Psi
                 editLbfsFt2.setText(df.format(valorIngresado * 0.00000864).replace(",", "."));
-                //Convertir a Psi
                 editKgHm.setText(df.format(valorIngresado * 1.49).replace(",", "."));
             }
         }
@@ -452,15 +419,10 @@ public class Viscosidad extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editP.setText(df.format(valorIngresado * 0.000278).replace(",", "."));
-                //Convertir a atm
                 editCp.setText(df.format(valorIngresado * 0.278).replace(",", "."));
-                //Convertir a Psi
                 editLbSft.setText(df.format(valorIngresado * 0.000187).replace(",", "."));
-                //Convertir a Psi
                 editLbfsFt2.setText(df.format(valorIngresado * 0.0000581).replace(",", "."));
-                //Convertir a Psi
                 editLbHft.setText(df.format(valorIngresado * 0.672).replace(",", "."));
             }
         }

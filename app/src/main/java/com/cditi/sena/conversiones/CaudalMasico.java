@@ -55,7 +55,6 @@ public class CaudalMasico extends AppCompatActivity
         editLbH = (EditText) findViewById(R.id.editLbH);
         editLbS = (EditText) findViewById(R.id.editLbS);
 
-        //Conversion para el Campo KgH
         editKgH.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -72,7 +71,6 @@ public class CaudalMasico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo KgS
         editKgS.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -89,7 +87,6 @@ public class CaudalMasico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo GH
         editGH.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -106,7 +103,6 @@ public class CaudalMasico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo GS
         editGS.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -123,7 +119,6 @@ public class CaudalMasico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo LbH
         editLbH.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -140,7 +135,6 @@ public class CaudalMasico extends AppCompatActivity
             }
         });
 
-        //Conversion para el Campo LbS
         editLbS.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -186,10 +180,8 @@ public class CaudalMasico extends AppCompatActivity
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[14]));
         items.add(new ItemsDrawer(R.mipmap.ic_launcher, titulos[15]));
 
-        // Relacionar el adaptador y la escucha de la lista del drawer
         listaDrawer.setAdapter(new AdapterDrawer(this, items));
 
-        //Activar icono del menu que se despliega
         toggle = new ActionBarDrawerToggle(this, menuDrawer, R.string.open, R.string.close);
 
         listaDrawer.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -307,15 +299,10 @@ public class CaudalMasico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgS.setText(df.format(valorIngresado / 3600).replace(",","."));
-                //Convertir a atm
                 editGH.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a Psi
                 editGS.setText(df.format((valorIngresado * 1000) / 3600).replace(",", "."));
-                //Convertir a Psi
                 editLbH.setText(df.format(valorIngresado / 0.453).replace(",", "."));
-                //Convertir a Psi
                 editLbS.setText(df.format((valorIngresado * 2.2075) * 0.0002778).replace(",", "."));
             }
         }
@@ -339,15 +326,10 @@ public class CaudalMasico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgH.setText(df.format(valorIngresado * 3600).replace(",","."));
-                //Convertir a atm
                 editGH.setText(df.format((valorIngresado * 1000) * 3600).replace(",", "."));
-                //Convertir a Psi
                 editGS.setText(df.format(valorIngresado * 1000).replace(",", "."));
-                //Convertir a Psi
                 editLbH.setText(df.format(valorIngresado / 0.000125833).replace(",", "."));
-                //Convertir a Psi
                 editLbS.setText(df.format(valorIngresado * 2.207505519).replace(",", "."));
             }
         }
@@ -371,15 +353,10 @@ public class CaudalMasico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgH.setText(df.format(valorIngresado / 1000).replace(",","."));
-                //Convertir a atm
                 editKgS.setText(df.format(valorIngresado / 3600000).replace(",", "."));
-                //Convertir a Psi
                 editGS.setText(df.format(valorIngresado / 3600).replace(",", "."));
-                //Convertir a Psi
                 editLbH.setText(df.format((valorIngresado / 1000) * 2.207505519).replace(",", "."));
-                //Convertir a Psi
                 editLbS.setText(df.format(valorIngresado / 1630800).replace(",", "."));
             }
         }
@@ -403,15 +380,10 @@ public class CaudalMasico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgH.setText(df.format((valorIngresado / 1000) * 3600).replace(",", "."));
-                //Convertir a atm
                 editKgS.setText(df.format(valorIngresado / 1000).replace(",", "."));
-                //Convertir a Psi
                 editGH.setText(df.format(valorIngresado * 3600).replace(",", "."));
-                //Convertir a Psi
                 editLbH.setText(df.format(valorIngresado / 0.126).replace(",", "."));
-                //Convertir a Psi
                 editLbS.setText(df.format(valorIngresado / 452.938347).replace(",", "."));
             }
         }
@@ -435,15 +407,10 @@ public class CaudalMasico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgH.setText(df.format(valorIngresado * 0.453).replace(",", "."));
-                //Convertir a atm
                 editKgS.setText(df.format((valorIngresado * 0.453) * 0.000277778).replace(",", "."));
-                //Convertir a Psi
                 editGH.setText(df.format(valorIngresado / 0.002207506).replace(",", "."));
-                //Convertir a Psi
                 editGS.setText(df.format(valorIngresado * 0.126).replace(",", "."));
-                //Convertir a Psi
                 editLbS.setText(df.format(valorIngresado / 3600).replace(",", "."));
             }
         }
@@ -467,15 +434,10 @@ public class CaudalMasico extends AppCompatActivity
             {
                 valorIngresado = Double.parseDouble(charSequence.toString());
 
-                //Convertir a N/m2
                 editKgH.setText(df.format(valorIngresado / 0.00061324).replace(",", "."));
-                //Convertir a atm
                 editKgS.setText(df.format(valorIngresado / 2.20750552).replace(",", "."));
-                //Convertir a Psi
                 editGH.setText(df.format((valorIngresado * 3600) * 453).replace(",", "."));
-                //Convertir a Psi
                 editGS.setText(df.format(valorIngresado / 0.002207806).replace(",", "."));
-                //Convertir a Psi
                 editLbH.setText(df.format(valorIngresado * 3600).replace(",", "."));
             }
         }
